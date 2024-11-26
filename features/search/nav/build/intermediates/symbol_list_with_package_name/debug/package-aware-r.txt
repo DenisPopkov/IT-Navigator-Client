@@ -1,0 +1,2 @@
+ru.popkov.navigator.features.search.nav
+string search_bottomnav_label

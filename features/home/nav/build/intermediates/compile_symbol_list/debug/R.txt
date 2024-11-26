@@ -1,0 +1,1 @@
+int string home_bottomnav_label 0x0

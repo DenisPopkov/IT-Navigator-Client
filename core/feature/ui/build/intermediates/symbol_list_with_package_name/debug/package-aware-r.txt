@@ -1,0 +1,10 @@
+ru.popkov.android.core.feature.ui
+drawable ic_article
+drawable ic_fave
+drawable ic_fave_fill
+drawable ic_section_arrow
+string search_hint
+string section_articles
+string section_author
+string section_poem
+string section_title

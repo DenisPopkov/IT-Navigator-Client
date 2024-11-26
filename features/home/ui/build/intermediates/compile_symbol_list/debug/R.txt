@@ -1,0 +1,2 @@
+int string header_desc 0x0
+int string header_title 0x0

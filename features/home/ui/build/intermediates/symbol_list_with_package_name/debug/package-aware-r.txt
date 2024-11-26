@@ -1,0 +1,3 @@
+ru.popkov.navigator.features.home.ui
+string header_desc
+string header_title

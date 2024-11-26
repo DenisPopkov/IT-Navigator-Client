@@ -1,0 +1,5 @@
+R_DEF: Internal format may change without notice
+local
+string empty_search_button
+string empty_search_description
+string empty_search_title

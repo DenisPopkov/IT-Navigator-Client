@@ -1,0 +1,4 @@
+ru.popkov.navigator.features.search.ui
+string empty_search_button
+string empty_search_description
+string empty_search_title

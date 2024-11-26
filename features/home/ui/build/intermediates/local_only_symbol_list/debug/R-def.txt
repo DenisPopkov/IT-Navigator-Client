@@ -1,0 +1,4 @@
+R_DEF: Internal format may change without notice
+local
+string header_desc
+string header_title

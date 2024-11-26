@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/gradle-plugins" name="gradle-plugins">
+                <projects>
+                  <project path="$PROJECT_DIR$/gradle-plugins" />
+                  <project path="$PROJECT_DIR$/gradle-plugins/convention" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/core/feature" />
+            <option value="$PROJECT_DIR$/core/feature/data" />
+            <option value="$PROJECT_DIR$/core/feature/datastore" />
+            <option value="$PROJECT_DIR$/core/feature/domain" />
+            <option value="$PROJECT_DIR$/core/feature/nav" />
+            <option value="$PROJECT_DIR$/core/feature/ui" />
+            <option value="$PROJECT_DIR$/features" />
+            <option value="$PROJECT_DIR$/features/auth" />
+            <option value="$PROJECT_DIR$/features/auth/nav" />
+            <option value="$PROJECT_DIR$/features/auth/ui" />
+            <option value="$PROJECT_DIR$/features/home" />
+            <option value="$PROJECT_DIR$/features/home/nav" />
+            <option value="$PROJECT_DIR$/features/home/ui" />
+            <option value="$PROJECT_DIR$/features/search" />
+            <option value="$PROJECT_DIR$/features/search/nav" />
+            <option value="$PROJECT_DIR$/features/search/ui" />
+            <option value="$PROJECT_DIR$/features/section" />
+            <option value="$PROJECT_DIR$/features/section/nav" />
+            <option value="$PROJECT_DIR$/features/section/ui" />
+            <option value="$PROJECT_DIR$/features/settings" />
+            <option value="$PROJECT_DIR$/features/settings/nav" />
+            <option value="$PROJECT_DIR$/features/settings/ui" />
+            <option value="$PROJECT_DIR$/features/splash" />
+            <option value="$PROJECT_DIR$/features/splash/nav" />
+            <option value="$PROJECT_DIR$/features/splash/ui" />
+            <option value="$PROJECT_DIR$/gradle-plugins" />
+            <option value="$PROJECT_DIR$/gradle-plugins/convention" />
+            <option value="$PROJECT_DIR$/theme" />
+          </set>
+        </option>
+        <option name="resolveExternalAnnotations" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
