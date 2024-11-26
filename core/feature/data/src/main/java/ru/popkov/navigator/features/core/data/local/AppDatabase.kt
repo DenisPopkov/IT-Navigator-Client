@@ -16,7 +16,7 @@ import ru.popkov.navigator.features.core.data.local.entities.UserData
         Article::class,
         Course::class,
     ],
-    version = 8,
+    version = 9,
     exportSchema = false,
 )
 
