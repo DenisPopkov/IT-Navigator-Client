@@ -23,10 +23,10 @@ class FeedRepository @Inject constructor(
     private val feedDao: FeedDao,
 ) : FeedRepository {
 
-    override suspend fun getAuthors(): List<Company> {
-        val authors = feedApi.getAuthors()
+    override suspend fun getCompanies(): List<Company> {
+        val authors = feedApi.getCompanies()
         feedDao.addAuthors(*authors.toListAuthorEntity().toTypedArray())
-        return feedDao.getAuthors().toListAuthorsDomain()
+        return feedDao.getCompanies().toListAuthorsDomain()
     }
 
     override suspend fun getArticles(): List<Article> {
@@ -35,14 +35,14 @@ class FeedRepository @Inject constructor(
         return feedDao.getArticles().toListArticlesDomain()
     }
 
-    override suspend fun getPoets(): List<Poet> {
-        val courses = feedApi.getPoets()
+    override suspend fun getCourses(): List<Poet> {
+        val courses = feedApi.getCourses()
         feedDao.addPoets(*courses.toListPoetEntity().toTypedArray())
-        return feedDao.getPoets().toListPoetsDomain()
+        return feedDao.getCourses().toListPoetsDomain()
     }
 
     override suspend fun getAuthorsFromLocal(): List<Company> {
-        return feedDao.getAuthors().toListAuthorsDomain()
+        return feedDao.getCompanies().toListAuthorsDomain()
     }
 
     override suspend fun getArticlesFromLocal(): List<Article> {
@@ -50,7 +50,7 @@ class FeedRepository @Inject constructor(
     }
 
     override suspend fun getPoetsFromLocal(): List<Poet> {
-        return feedDao.getPoets().toListPoetsDomain()
+        return feedDao.getCourses().toListPoetsDomain()
     }
 
 }

@@ -44,7 +44,7 @@ class SectionViewModel @Inject constructor(
         }
     }
 
-    suspend fun getAuthors() {
+    suspend fun getCompanies() {
         val handler = CoroutineExceptionHandler { _, throwable ->
             Timber.tag("Section:").d(throwable, "error occurred: %s", 0)
         }
@@ -96,7 +96,7 @@ class SectionViewModel @Inject constructor(
         }
     }
 
-    suspend fun getPoets() {
+    suspend fun getCourses() {
         val handler = CoroutineExceptionHandler { _, throwable ->
             Timber.tag("Section:").d(throwable, "error occurred: %s", 0)
         }

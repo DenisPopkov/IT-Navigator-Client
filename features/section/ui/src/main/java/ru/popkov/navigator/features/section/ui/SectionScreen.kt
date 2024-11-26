@@ -37,9 +37,9 @@ fun SectionScreen(
 
     LaunchedEffect(Unit) {
         when (sectionViewModel.sectionType) {
-            SectionType.COMPANY -> sectionViewModel.getAuthors()
+            SectionType.COMPANY -> sectionViewModel.getCompanies()
             SectionType.ARTICLE -> sectionViewModel.getArticles()
-            SectionType.COURSE -> sectionViewModel.getPoets()
+            SectionType.COURSE -> sectionViewModel.getCourses()
             else -> {}
         }
         sectionViewModel.effects

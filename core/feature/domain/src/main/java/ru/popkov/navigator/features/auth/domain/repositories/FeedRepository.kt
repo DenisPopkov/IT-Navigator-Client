@@ -5,11 +5,11 @@ import ru.popkov.navigator.features.auth.domain.model.Company
 import ru.popkov.navigator.features.auth.domain.model.Poet
 
 interface FeedRepository {
-    suspend fun getAuthors(): List<Company>
+    suspend fun getCompanies(): List<Company>
 
     suspend fun getArticles(): List<Article>
 
-    suspend fun getPoets(): List<Poet>
+    suspend fun getCourses(): List<Poet>
 
     suspend fun getAuthorsFromLocal(): List<Company>
 

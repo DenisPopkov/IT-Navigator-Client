@@ -7,18 +7,12 @@ import ru.popkov.navigator.features.core.data.remote.dtos.Poet
 
 interface FeedApi {
 
-    @GET("/authors")
-    suspend fun getAuthors(
+    @GET("/feed")
+    suspend fun getCompanies(): List<Company>
 
-    ): List<Company>
+    @GET("/feed")
+    suspend fun getArticles(): List<Article>
 
-    @GET("/articles")
-    suspend fun getArticles(
-
-    ): List<Article>
-
-    @GET("/courses")
-    suspend fun getPoets(
-
-    ): List<Poet>
+    @GET("/course")
+    suspend fun getCourses(): List<Poet>
 }

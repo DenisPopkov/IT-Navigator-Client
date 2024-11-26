@@ -22,17 +22,17 @@ abstract class FeedDao {
     abstract suspend fun addPoets(vararg course: Course)
 
     @Query("SELECT * FROM company")
-    abstract suspend fun getAuthors(): List<Company>
+    abstract suspend fun getCompanies(): List<Company>
 
     @Query("SELECT * FROM article")
     abstract suspend fun getArticles(): List<Article>
 
     @Query("SELECT * FROM course")
-    abstract suspend fun getPoets(): List<Course>
+    abstract suspend fun getCourses(): List<Course>
 
     @Transaction
     @Query("SELECT * FROM company WHERE id = :authorId")
-    abstract suspend fun findAuthorById(authorId: Long): Company
+    abstract suspend fun findCompanyById(authorId: Long): Company
 
     @Transaction
     @Query("SELECT * FROM article WHERE id = :articleId")
@@ -40,5 +40,5 @@ abstract class FeedDao {
 
     @Transaction
     @Query("SELECT * FROM course WHERE id = :poetId")
-    abstract suspend fun findPoetById(poetId: Long): Course
+    abstract suspend fun findCourseById(poetId: Long): Course
 }

@@ -70,9 +70,9 @@ class SearchViewModel @Inject constructor(
     private suspend fun setFilter(sectionType: SectionType) {
         when (sectionType) {
             SectionType.ALL -> getAll()
-            SectionType.COMPANY -> getAuthors()
+            SectionType.COMPANY -> getCompanies()
             SectionType.ARTICLE -> getArticles()
-            else -> getPoets()
+            else -> getCourses()
         }
     }
 
@@ -108,7 +108,7 @@ class SearchViewModel @Inject constructor(
         }
     }
 
-    private suspend fun getAuthors(filter: String? = null) {
+    private suspend fun getCompanies(filter: String? = null) {
         val handler = CoroutineExceptionHandler { _, throwable ->
             Timber.tag("Search:").d(throwable, "error occurred: %s", 0)
         }
@@ -162,7 +162,7 @@ class SearchViewModel @Inject constructor(
         }
     }
 
-    private suspend fun getPoets(filter: String? = null) {
+    private suspend fun getCourses(filter: String? = null) {
         val handler = CoroutineExceptionHandler { _, throwable ->
             Timber.tag("Search:").d(throwable, "error occurred: %s", 0)
         }

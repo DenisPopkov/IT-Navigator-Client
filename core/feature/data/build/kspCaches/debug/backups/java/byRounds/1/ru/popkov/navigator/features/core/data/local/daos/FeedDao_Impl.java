@@ -143,7 +143,7 @@ public final class FeedDao_Impl extends FeedDao {
   }
 
   @Override
-  public Object getAuthors(final Continuation<? super List<Company>> $completion) {
+  public Object getCompanies(final Continuation<? super List<Company>> $completion) {
     final String _sql = "SELECT * FROM company";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
@@ -216,7 +216,7 @@ public final class FeedDao_Impl extends FeedDao {
   }
 
   @Override
-  public Object getPoets(final Continuation<? super List<Course>> $completion) {
+  public Object getCourses(final Continuation<? super List<Course>> $completion) {
     final String _sql = "SELECT * FROM course";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
@@ -251,7 +251,7 @@ public final class FeedDao_Impl extends FeedDao {
   }
 
   @Override
-  public Object findAuthorById(final long authorId,
+  public Object findCompanyById(final long authorId,
       final Continuation<? super Company> $completion) {
     final String _sql = "SELECT * FROM company WHERE id = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
@@ -342,7 +342,7 @@ public final class FeedDao_Impl extends FeedDao {
   }
 
   @Override
-  public Object findPoetById(final long poetId, final Continuation<? super Course> $completion) {
+  public Object findCourseById(final long poetId, final Continuation<? super Course> $completion) {
     final String _sql = "SELECT * FROM course WHERE id = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;

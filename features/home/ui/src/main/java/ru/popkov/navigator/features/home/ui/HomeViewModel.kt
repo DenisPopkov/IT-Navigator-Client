@@ -58,9 +58,9 @@ class HomeViewModel @Inject constructor(
                     )
                 }
             } else {
-                val authors = feedRepository.getAuthors()
+                val authors = feedRepository.getCompanies()
                 val articles = feedRepository.getArticles()
-                val courses = feedRepository.getPoets()
+                val courses = feedRepository.getCourses()
 
                 updateState {
                     copy(
