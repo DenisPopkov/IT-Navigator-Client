@@ -1,0 +1,7 @@
+int drawable ic_placeholder 0x0
+int string settings_change_theme 0x0
+int string settings_delete_account 0x0
+int string settings_description 0x0
+int string settings_exit_account 0x0
+int string settings_profile_description 0x0
+int string settings_title 0x0

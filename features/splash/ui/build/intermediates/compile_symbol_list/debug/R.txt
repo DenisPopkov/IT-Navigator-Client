@@ -1,0 +1,1 @@
+int string splash_screen_label 0x0

@@ -1,0 +1,8 @@
+ru.popkov.navigator.features.settings.ui
+drawable ic_placeholder
+string settings_change_theme
+string settings_delete_account
+string settings_description
+string settings_exit_account
+string settings_profile_description
+string settings_title

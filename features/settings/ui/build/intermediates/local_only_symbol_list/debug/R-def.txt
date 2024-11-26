@@ -1,0 +1,9 @@
+R_DEF: Internal format may change without notice
+local
+drawable ic_placeholder
+string settings_change_theme
+string settings_delete_account
+string settings_description
+string settings_exit_account
+string settings_profile_description
+string settings_title

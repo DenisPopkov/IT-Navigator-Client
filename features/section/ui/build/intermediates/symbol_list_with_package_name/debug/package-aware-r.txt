@@ -1,0 +1,4 @@
+ru.popkov.navigator.features.section.ui
+string title_articles
+string title_authors
+string title_poets

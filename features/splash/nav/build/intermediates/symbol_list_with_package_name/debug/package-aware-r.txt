@@ -1,0 +1,1 @@
+ru.popkov.navigator.features.splash.nav

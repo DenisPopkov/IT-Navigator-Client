@@ -1,0 +1,2 @@
+ru.popkov.navigator.features.splash.ui
+string splash_screen_label

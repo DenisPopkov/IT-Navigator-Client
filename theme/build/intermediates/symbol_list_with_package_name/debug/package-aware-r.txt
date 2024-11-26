@@ -1,0 +1,14 @@
+ru.popkov.navigator.theme
+color black
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+font formular_medium
+font formular_regular
+font gothic_bold
+font gothic_regular
+font grotesk_bold
+style Theme_ComposeSample

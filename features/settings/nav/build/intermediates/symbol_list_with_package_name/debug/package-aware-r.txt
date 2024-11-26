@@ -1,0 +1,2 @@
+ru.popkov.navigator.features.settings.nav
+string settings_bottomnav_label
