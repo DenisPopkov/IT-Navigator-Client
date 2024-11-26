@@ -158,25 +158,6 @@ internal fun Settings(
             colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primaryContainer),
             shape = RoundedCornerShape(size = 8.dp),
             onClick = {
-                onAction.invoke(SettingsViewAction.OnDeleteAccountClick)
-            }
-        ) {
-            Text(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 8.dp),
-                text = stringResource(id = R.string.settings_delete_account),
-                style = FormularMedium14,
-                color = MaterialTheme.colorScheme.onPrimary,
-            )
-        }
-        Button(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(top = 16.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primaryContainer),
-            shape = RoundedCornerShape(size = 8.dp),
-            onClick = {
                 onAction.invoke(SettingsViewAction.OnExitAccountClick)
             }
         ) {
@@ -186,6 +167,26 @@ internal fun Settings(
                     .padding(vertical = 8.dp),
                 text = stringResource(id = R.string.settings_exit_account),
                 style = FormularMedium14,
+                color = MaterialTheme.colorScheme.onPrimary,
+            )
+        }
+
+        Button(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 16.dp),
+            colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primaryContainer),
+            shape = RoundedCornerShape(size = 8.dp),
+            onClick = {
+                onAction.invoke(SettingsViewAction.OnDeleteAccountClick)
+            }
+        ) {
+            Text(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 8.dp),
+                text = stringResource(id = R.string.settings_delete_account),
+                style = FormularMedium14.copy(color = Color.Red),
                 color = MaterialTheme.colorScheme.onPrimary,
             )
         }

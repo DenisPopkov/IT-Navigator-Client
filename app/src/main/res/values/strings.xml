@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">IT-Navigator</string>
+    <string name="app_name">Навигатор</string>
     <string name="splash_screen_label">ИТ-Навигатор</string>
     // Auth screen
     <string name="auth_title">Авторизация</string>

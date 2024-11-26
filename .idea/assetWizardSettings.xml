@@ -79,8 +79,8 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="$USER_HOME$/Desktop/ic_launcher.png" />
-                                                <entry key="scalingPercent" value="50" />
+                                                <entry key="imagePath" value="$USER_HOME$/Downloads/Images_app/login_screen.png" />
+                                                <entry key="scalingPercent" value="74" />
                                               </map>
                                             </option>
                                           </PersistentState>
