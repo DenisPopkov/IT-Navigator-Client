@@ -10,7 +10,7 @@ interface FeedApi {
     @GET("/feed")
     suspend fun getCompanies(): List<Company>
 
-    @GET("/feed")
+    @GET("/article")
     suspend fun getArticles(): List<Article>
 
     @GET("/course")
