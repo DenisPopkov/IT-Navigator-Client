@@ -5,16 +5,16 @@ import androidx.room.RoomDatabase
 import ru.popkov.navigator.features.core.data.local.daos.FeedDao
 import ru.popkov.navigator.features.core.data.local.daos.UserDao
 import ru.popkov.navigator.features.core.data.local.entities.Article
-import ru.popkov.navigator.features.core.data.local.entities.Author
-import ru.popkov.navigator.features.core.data.local.entities.Poet
+import ru.popkov.navigator.features.core.data.local.entities.Company
+import ru.popkov.navigator.features.core.data.local.entities.Course
 import ru.popkov.navigator.features.core.data.local.entities.UserData
 
 @Database(
     entities = [
         UserData::class,
-        Author::class,
+        Company::class,
         Article::class,
-        Poet::class,
+        Course::class,
     ],
     version = 8,
     exportSchema = false,

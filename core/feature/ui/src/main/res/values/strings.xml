@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="search_hint">Поиск</string>
-    <string name="section_author">ПИСАТЕЛИ</string>
-    <string name="section_articles">СТАТЬИ О ЛИТЕРАТУРЕ</string>
-    <string name="section_poem">ПОЭТИЧЕСКИЕ ЧТЕНИЯ</string>
-    <string name="section_title">статьи о литературе</string>
+    <string name="section_author">Компании</string>
+    <string name="section_articles">Новости</string>
+    <string name="section_poem">Курсы</string>
+    <string name="section_title">список новостей</string>
 </resources>

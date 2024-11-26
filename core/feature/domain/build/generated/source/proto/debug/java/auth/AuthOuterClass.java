@@ -14,23 +14,23 @@ public final class AuthOuterClass {
 
     /**
      * <pre>
-     * phone number of the user to register
+     * email number of the user to register
      * </pre>
      *
-     * <code>string phone = 1;</code>
-     * @return The phone.
+     * <code>string email = 1;</code>
+     * @return The email.
      */
-    java.lang.String getPhone();
+    java.lang.String getEmail();
     /**
      * <pre>
-     * phone number of the user to register
+     * email number of the user to register
      * </pre>
      *
-     * <code>string phone = 1;</code>
-     * @return The bytes for phone.
+     * <code>string email = 1;</code>
+     * @return The bytes for email.
      */
     com.google.protobuf.ByteString
-        getPhoneBytes();
+        getEmailBytes();
 
     /**
      * <pre>
@@ -61,73 +61,73 @@ public final class AuthOuterClass {
       // @@protoc_insertion_point(message_implements:auth.RegisterRequest)
       RegisterRequestOrBuilder {
     private RegisterRequest() {
-      phone_ = "";
+      email_ = "";
       password_ = "";
     }
-    public static final int PHONE_FIELD_NUMBER = 1;
-    private java.lang.String phone_;
+    public static final int EMAIL_FIELD_NUMBER = 1;
+    private java.lang.String email_;
     /**
      * <pre>
-     * phone number of the user to register
+     * email number of the user to register
      * </pre>
      *
-     * <code>string phone = 1;</code>
-     * @return The phone.
+     * <code>string email = 1;</code>
+     * @return The email.
      */
     @java.lang.Override
-    public java.lang.String getPhone() {
-      return phone_;
+    public java.lang.String getEmail() {
+      return email_;
     }
     /**
      * <pre>
-     * phone number of the user to register
+     * email number of the user to register
      * </pre>
      *
-     * <code>string phone = 1;</code>
-     * @return The bytes for phone.
+     * <code>string email = 1;</code>
+     * @return The bytes for email.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getPhoneBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(phone_);
+        getEmailBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(email_);
     }
     /**
      * <pre>
-     * phone number of the user to register
+     * email number of the user to register
      * </pre>
      *
-     * <code>string phone = 1;</code>
-     * @param value The phone to set.
+     * <code>string email = 1;</code>
+     * @param value The email to set.
      */
-    private void setPhone(
+    private void setEmail(
         java.lang.String value) {
       java.lang.Class<?> valueClass = value.getClass();
   
-      phone_ = value;
+      email_ = value;
     }
     /**
      * <pre>
-     * phone number of the user to register
+     * email number of the user to register
      * </pre>
      *
-     * <code>string phone = 1;</code>
+     * <code>string email = 1;</code>
      */
-    private void clearPhone() {
+    private void clearEmail() {
       
-      phone_ = getDefaultInstance().getPhone();
+      email_ = getDefaultInstance().getEmail();
     }
     /**
      * <pre>
-     * phone number of the user to register
+     * email number of the user to register
      * </pre>
      *
-     * <code>string phone = 1;</code>
-     * @param value The bytes for phone to set.
+     * <code>string email = 1;</code>
+     * @param value The bytes for email to set.
      */
-    private void setPhoneBytes(
+    private void setEmailBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      phone_ = value.toStringUtf8();
+      email_ = value.toStringUtf8();
       
     }
 
@@ -295,70 +295,70 @@ public final class AuthOuterClass {
 
       /**
        * <pre>
-       * phone number of the user to register
+       * email number of the user to register
        * </pre>
        *
-       * <code>string phone = 1;</code>
-       * @return The phone.
+       * <code>string email = 1;</code>
+       * @return The email.
        */
       @java.lang.Override
-      public java.lang.String getPhone() {
-        return instance.getPhone();
+      public java.lang.String getEmail() {
+        return instance.getEmail();
       }
       /**
        * <pre>
-       * phone number of the user to register
+       * email number of the user to register
        * </pre>
        *
-       * <code>string phone = 1;</code>
-       * @return The bytes for phone.
+       * <code>string email = 1;</code>
+       * @return The bytes for email.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getPhoneBytes() {
-        return instance.getPhoneBytes();
+          getEmailBytes() {
+        return instance.getEmailBytes();
       }
       /**
        * <pre>
-       * phone number of the user to register
+       * email number of the user to register
        * </pre>
        *
-       * <code>string phone = 1;</code>
-       * @param value The phone to set.
+       * <code>string email = 1;</code>
+       * @param value The email to set.
        * @return This builder for chaining.
        */
-      public Builder setPhone(
+      public Builder setEmail(
           java.lang.String value) {
         copyOnWrite();
-        instance.setPhone(value);
+        instance.setEmail(value);
         return this;
       }
       /**
        * <pre>
-       * phone number of the user to register
+       * email number of the user to register
        * </pre>
        *
-       * <code>string phone = 1;</code>
+       * <code>string email = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearPhone() {
+      public Builder clearEmail() {
         copyOnWrite();
-        instance.clearPhone();
+        instance.clearEmail();
         return this;
       }
       /**
        * <pre>
-       * phone number of the user to register
+       * email number of the user to register
        * </pre>
        *
-       * <code>string phone = 1;</code>
-       * @param value The bytes for phone to set.
+       * <code>string email = 1;</code>
+       * @param value The bytes for email to set.
        * @return This builder for chaining.
        */
-      public Builder setPhoneBytes(
+      public Builder setEmailBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setPhoneBytes(value);
+        instance.setEmailBytes(value);
         return this;
       }
 
@@ -447,7 +447,7 @@ public final class AuthOuterClass {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "phone_",
+              "email_",
               "password_",
             };
             java.lang.String info =
@@ -784,23 +784,23 @@ public final class AuthOuterClass {
 
     /**
      * <pre>
-     * phone number of the user to register
+     * email number of the user to register
      * </pre>
      *
-     * <code>string phone = 1;</code>
-     * @return The phone.
+     * <code>string email = 1;</code>
+     * @return The email.
      */
-    java.lang.String getPhone();
+    java.lang.String getEmail();
     /**
      * <pre>
-     * phone number of the user to register
+     * email number of the user to register
      * </pre>
      *
-     * <code>string phone = 1;</code>
-     * @return The bytes for phone.
+     * <code>string email = 1;</code>
+     * @return The bytes for email.
      */
     com.google.protobuf.ByteString
-        getPhoneBytes();
+        getEmailBytes();
 
     /**
      * <pre>
@@ -831,73 +831,73 @@ public final class AuthOuterClass {
       // @@protoc_insertion_point(message_implements:auth.LoginRequest)
       LoginRequestOrBuilder {
     private LoginRequest() {
-      phone_ = "";
+      email_ = "";
       password_ = "";
     }
-    public static final int PHONE_FIELD_NUMBER = 1;
-    private java.lang.String phone_;
+    public static final int EMAIL_FIELD_NUMBER = 1;
+    private java.lang.String email_;
     /**
      * <pre>
-     * phone number of the user to register
+     * email number of the user to register
      * </pre>
      *
-     * <code>string phone = 1;</code>
-     * @return The phone.
+     * <code>string email = 1;</code>
+     * @return The email.
      */
     @java.lang.Override
-    public java.lang.String getPhone() {
-      return phone_;
+    public java.lang.String getEmail() {
+      return email_;
     }
     /**
      * <pre>
-     * phone number of the user to register
+     * email number of the user to register
      * </pre>
      *
-     * <code>string phone = 1;</code>
-     * @return The bytes for phone.
+     * <code>string email = 1;</code>
+     * @return The bytes for email.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getPhoneBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(phone_);
+        getEmailBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(email_);
     }
     /**
      * <pre>
-     * phone number of the user to register
+     * email number of the user to register
      * </pre>
      *
-     * <code>string phone = 1;</code>
-     * @param value The phone to set.
+     * <code>string email = 1;</code>
+     * @param value The email to set.
      */
-    private void setPhone(
+    private void setEmail(
         java.lang.String value) {
       java.lang.Class<?> valueClass = value.getClass();
   
-      phone_ = value;
+      email_ = value;
     }
     /**
      * <pre>
-     * phone number of the user to register
+     * email number of the user to register
      * </pre>
      *
-     * <code>string phone = 1;</code>
+     * <code>string email = 1;</code>
      */
-    private void clearPhone() {
+    private void clearEmail() {
       
-      phone_ = getDefaultInstance().getPhone();
+      email_ = getDefaultInstance().getEmail();
     }
     /**
      * <pre>
-     * phone number of the user to register
+     * email number of the user to register
      * </pre>
      *
-     * <code>string phone = 1;</code>
-     * @param value The bytes for phone to set.
+     * <code>string email = 1;</code>
+     * @param value The bytes for email to set.
      */
-    private void setPhoneBytes(
+    private void setEmailBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      phone_ = value.toStringUtf8();
+      email_ = value.toStringUtf8();
       
     }
 
@@ -1065,70 +1065,70 @@ public final class AuthOuterClass {
 
       /**
        * <pre>
-       * phone number of the user to register
+       * email number of the user to register
        * </pre>
        *
-       * <code>string phone = 1;</code>
-       * @return The phone.
+       * <code>string email = 1;</code>
+       * @return The email.
        */
       @java.lang.Override
-      public java.lang.String getPhone() {
-        return instance.getPhone();
+      public java.lang.String getEmail() {
+        return instance.getEmail();
       }
       /**
        * <pre>
-       * phone number of the user to register
+       * email number of the user to register
        * </pre>
        *
-       * <code>string phone = 1;</code>
-       * @return The bytes for phone.
+       * <code>string email = 1;</code>
+       * @return The bytes for email.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getPhoneBytes() {
-        return instance.getPhoneBytes();
+          getEmailBytes() {
+        return instance.getEmailBytes();
       }
       /**
        * <pre>
-       * phone number of the user to register
+       * email number of the user to register
        * </pre>
        *
-       * <code>string phone = 1;</code>
-       * @param value The phone to set.
+       * <code>string email = 1;</code>
+       * @param value The email to set.
        * @return This builder for chaining.
        */
-      public Builder setPhone(
+      public Builder setEmail(
           java.lang.String value) {
         copyOnWrite();
-        instance.setPhone(value);
+        instance.setEmail(value);
         return this;
       }
       /**
        * <pre>
-       * phone number of the user to register
+       * email number of the user to register
        * </pre>
        *
-       * <code>string phone = 1;</code>
+       * <code>string email = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearPhone() {
+      public Builder clearEmail() {
         copyOnWrite();
-        instance.clearPhone();
+        instance.clearEmail();
         return this;
       }
       /**
        * <pre>
-       * phone number of the user to register
+       * email number of the user to register
        * </pre>
        *
-       * <code>string phone = 1;</code>
-       * @param value The bytes for phone to set.
+       * <code>string email = 1;</code>
+       * @param value The bytes for email to set.
        * @return This builder for chaining.
        */
-      public Builder setPhoneBytes(
+      public Builder setEmailBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setPhoneBytes(value);
+        instance.setEmailBytes(value);
         return this;
       }
 
@@ -1217,7 +1217,7 @@ public final class AuthOuterClass {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "phone_",
+              "email_",
               "password_",
             };
             java.lang.String info =

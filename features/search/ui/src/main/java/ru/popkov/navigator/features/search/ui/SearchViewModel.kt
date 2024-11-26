@@ -70,7 +70,7 @@ class SearchViewModel @Inject constructor(
     private suspend fun setFilter(sectionType: SectionType) {
         when (sectionType) {
             SectionType.ALL -> getAll()
-            SectionType.AUTHOR -> getAuthors()
+            SectionType.COMPANY -> getAuthors()
             SectionType.ARTICLE -> getArticles()
             else -> getPoets()
         }
@@ -87,14 +87,14 @@ class SearchViewModel @Inject constructor(
                 feedRepository.getAuthorsFromLocal().filter { it.name.contains(filter ?: it.name) }
             val articles = feedRepository.getArticlesFromLocal()
                 .filter { it.name.contains((filter ?: it.name)) }
-            val poets =
+            val courses =
                 feedRepository.getPoetsFromLocal().filter { it.name.contains((filter ?: it.name)) }
             updateState {
                 copy(
                     authors = authors,
                     articles = articles,
-                    poets = poets,
-                    isEmptyState = authors.isEmpty() && articles.isEmpty() && poets.isEmpty(),
+                    courses = courses,
+                    isEmptyState = authors.isEmpty() && articles.isEmpty() && courses.isEmpty(),
                     isLoading = false,
                 )
             }
@@ -120,7 +120,7 @@ class SearchViewModel @Inject constructor(
                 copy(
                     authors = authors.filter { it.name.contains((filter ?: it.name)) },
                     articles = null,
-                    poets = null,
+                    courses = null,
                     isEmptyState = authors.isEmpty(),
                     isLoading = false,
                 )
@@ -147,7 +147,7 @@ class SearchViewModel @Inject constructor(
                 copy(
                     authors = null,
                     articles = articles.filter { it.name.contains((filter ?: it.name)) },
-                    poets = null,
+                    courses = null,
                     isEmptyState = articles.isEmpty(),
                     isLoading = false,
                 )
@@ -169,13 +169,13 @@ class SearchViewModel @Inject constructor(
 
         viewModelScope.launch(handler) {
             updateState { copy(isLoading = true) }
-            val poets = feedRepository.getPoetsFromLocal()
+            val courses = feedRepository.getPoetsFromLocal()
             updateState {
                 copy(
                     authors = null,
                     articles = null,
-                    poets = poets.filter { it.name.contains((filter ?: it.name)) },
-                    isEmptyState = poets.isEmpty(),
+                    courses = courses.filter { it.name.contains((filter ?: it.name)) },
+                    isEmptyState = courses.isEmpty(),
                     isLoading = false,
                 )
             }

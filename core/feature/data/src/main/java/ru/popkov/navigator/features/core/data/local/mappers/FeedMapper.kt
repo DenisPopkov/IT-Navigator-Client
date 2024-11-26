@@ -1,12 +1,12 @@
 package ru.popkov.navigator.features.core.data.local.mappers
 
 import ru.popkov.navigator.features.auth.domain.model.Article as ArticlesDomain
-import ru.popkov.navigator.features.auth.domain.model.Author as AuthorsDomain
+import ru.popkov.navigator.features.auth.domain.model.Company as AuthorsDomain
 import ru.popkov.navigator.features.auth.domain.model.Poet as PoetsDomain
 import ru.popkov.navigator.features.core.data.local.entities.Article as ArticlesEntity
-import ru.popkov.navigator.features.core.data.local.entities.Author as AuthorEntity
-import ru.popkov.navigator.features.core.data.local.entities.Author as AuthorsEntity
-import ru.popkov.navigator.features.core.data.local.entities.Poet as PoetsEntity
+import ru.popkov.navigator.features.core.data.local.entities.Company as AuthorEntity
+import ru.popkov.navigator.features.core.data.local.entities.Company as AuthorsEntity
+import ru.popkov.navigator.features.core.data.local.entities.Course as PoetsEntity
 
 object FeedMapper {
 

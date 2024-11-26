@@ -3,7 +3,7 @@ package ru.popkov.navigator.features.auth.domain.model
 import com.google.errorprone.annotations.Keep
 
 @Keep
-data class Author(
+data class Company(
     val id: Long,
     val name: String,
     val image: String,

@@ -6,7 +6,7 @@ import com.squareup.moshi.JsonClass
 
 @Keep
 @JsonClass(generateAdapter = true)
-data class Author(
+data class Company(
     val id: Long,
     val name: String,
     val image: String,

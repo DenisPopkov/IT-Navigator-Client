@@ -53,20 +53,20 @@ class HomeViewModel @Inject constructor(
                     copy(
                         authors = authorsFromLocal,
                         articles = articlesFromLocal,
-                        poets = poetsFromLocal,
+                        courses = poetsFromLocal,
                         isLoading = false,
                     )
                 }
             } else {
                 val authors = feedRepository.getAuthors()
                 val articles = feedRepository.getArticles()
-                val poets = feedRepository.getPoets()
+                val courses = feedRepository.getPoets()
 
                 updateState {
                     copy(
                         authors = authors,
                         articles = articles,
-                        poets = poets,
+                        courses = courses,
                         isLoading = false,
                     )
                 }

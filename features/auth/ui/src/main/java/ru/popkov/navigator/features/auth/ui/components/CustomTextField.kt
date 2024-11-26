@@ -29,7 +29,7 @@ fun CustomTextField(
     keyboardActions: KeyboardActions = KeyboardActions(),
     inputFieldTextColor: Color = MaterialTheme.colorScheme.onPrimary,
     inputFieldColor: Color = MaterialTheme.colorScheme.primaryContainer,
-    keyboardOptions: KeyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone),
+    keyboardOptions: KeyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
     @StringRes placeHolderText: Int = R.string.auth_email,
     mask: String? = null,
     maskNumber: Char? = null,

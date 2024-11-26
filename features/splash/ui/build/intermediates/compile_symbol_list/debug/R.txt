@@ -1,1 +1,2 @@
+int drawable login_screen 0x0
 int string splash_screen_label 0x0

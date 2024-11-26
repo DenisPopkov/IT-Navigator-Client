@@ -1,17 +1,17 @@
 package ru.popkov.navigator.features.auth.domain.repositories
 
 import ru.popkov.navigator.features.auth.domain.model.Article
-import ru.popkov.navigator.features.auth.domain.model.Author
+import ru.popkov.navigator.features.auth.domain.model.Company
 import ru.popkov.navigator.features.auth.domain.model.Poet
 
 interface FeedRepository {
-    suspend fun getAuthors(): List<Author>
+    suspend fun getAuthors(): List<Company>
 
     suspend fun getArticles(): List<Article>
 
     suspend fun getPoets(): List<Poet>
 
-    suspend fun getAuthorsFromLocal(): List<Author>
+    suspend fun getAuthorsFromLocal(): List<Company>
 
     suspend fun getArticlesFromLocal(): List<Article>
 

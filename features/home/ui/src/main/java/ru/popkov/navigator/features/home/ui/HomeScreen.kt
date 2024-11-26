@@ -6,26 +6,15 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ColumnScope
-import androidx.compose.foundation.layout.WindowInsets
-import androidx.compose.foundation.layout.asPaddingValues
-import androidx.compose.foundation.layout.displayCutout
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.Text
-import androidx.compose.material.contentColorFor
-import androidx.compose.material3.BottomSheetDefaults
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.SheetState
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -34,8 +23,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Shape
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import ru.popkov.android.core.feature.components.core.Carousel
@@ -47,47 +34,6 @@ import ru.popkov.android.core.feature.ui.R
 import ru.popkov.android.core.feature.ui.UiModePreviews
 import ru.popkov.navigator.theme.NavigatorThemeInfinite
 
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun BetterModalBottomSheet(
-    showSheet: Boolean,
-    onDismissRequest: () -> Unit,
-    modifier: Modifier = Modifier,
-    sheetState: SheetState = androidx.compose.material3.rememberModalBottomSheetState(
-        skipPartiallyExpanded = true,
-    ),
-    shape: Shape = BottomSheetDefaults.ExpandedShape,
-    containerColor: Color = BottomSheetDefaults.ContainerColor,
-    contentColor: Color = contentColorFor(containerColor),
-    tonalElevation: Dp = BottomSheetDefaults.Elevation,
-    scrimColor: Color = BottomSheetDefaults.ScrimColor,
-    dragHandle: @Composable (() -> Unit)? = { BottomSheetDefaults.DragHandle() },
-    windowInsets: WindowInsets = WindowInsets.displayCutout,
-    content: @Composable ColumnScope.() -> Unit,
-) {
-    val bottomPadding = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
-
-    if (showSheet) {
-        ModalBottomSheet(
-            onDismissRequest = onDismissRequest,
-            modifier = modifier,
-            sheetState = sheetState,
-            shape = shape,
-            containerColor = containerColor,
-            contentColor = contentColor,
-            tonalElevation = tonalElevation,
-            scrimColor = scrimColor,
-            dragHandle = dragHandle,
-            windowInsets = windowInsets
-        ) {
-            Column(modifier = Modifier.padding(bottom = bottomPadding)) {
-                content()
-            }
-        }
-    }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 internal fun HomeScreen(
     snackbarHostState: SnackbarHostState,
@@ -129,19 +75,6 @@ internal fun HomeScreen(
             }
         }
     }
-
-    BetterModalBottomSheet(
-        showSheet = true,
-        onDismissRequest = {},
-        content = {
-            Column(
-                modifier = Modifier
-                    .fillMaxSize(),
-            ) {
-                Text("Dismiss")
-            }
-        }
-    )
 }
 
 @Composable
@@ -186,14 +119,14 @@ private fun Home(
                 .padding(horizontal = 16.dp),
             horizontalArrangement = Arrangement.spacedBy(10.dp),
         ) {
-            items(state.authors ?: emptyList()) { author ->
+            items(state.authors ?: emptyList()) { company ->
                 Card(
-                    cardImageUrl = author.image,
-                    cardText = author.name,
+                    cardImageUrl = company.image,
+                    cardText = company.name,
                     cardType = CardType.SMALL,
                     onCardActionClick = {
                         onAction.invoke(
-                            HomeViewAction.OnCardClick(author.id)
+                            HomeViewAction.OnCardClick(company.id)
                         )
                     },
                 )
@@ -244,14 +177,14 @@ private fun Home(
                 .padding(horizontal = 16.dp),
             horizontalArrangement = Arrangement.spacedBy(10.dp),
         ) {
-            items(state.poets ?: emptyList()) { poet ->
+            items(state.courses ?: emptyList()) { course ->
                 Card(
-                    cardImageUrl = poet.image,
-                    cardText = poet.name,
+                    cardImageUrl = course.image,
+                    cardText = course.name,
                     cardType = CardType.MEDIUM,
                     onCardActionClick = {
                         onAction.invoke(
-                            HomeViewAction.OnCardClick(poet.id)
+                            HomeViewAction.OnCardClick(course.id)
                         )
                     },
                 )

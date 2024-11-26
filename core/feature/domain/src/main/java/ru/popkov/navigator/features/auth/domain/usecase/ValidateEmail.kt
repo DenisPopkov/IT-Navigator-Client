@@ -3,13 +3,13 @@ package ru.popkov.navigator.features.auth.domain.usecase
 import ru.popkov.navigator.features.auth.domain.model.ValidationResult
 import javax.inject.Inject
 
-private val PHONE_NUMBER_REGULAR =
-    "(^8|7|\\+7)((\\d{10})|(\\s\\(\\d{3}\\)\\s\\d{3}\\s\\d{2}\\s\\d{2}))".toRegex()
+private val EMAIL_REGEX =
+    "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$".toRegex()
 
-class ValidatePhoneNumber @Inject constructor() {
+class ValidateEmail @Inject constructor() {
 
-    operator fun invoke(phoneNumber: String): ValidationResult {
-        if (!PHONE_NUMBER_REGULAR.matches(phoneNumber)) {
+    operator fun invoke(email: String): ValidationResult {
+        if (!EMAIL_REGEX.matches(email)) {
             return ValidationResult(
                 successful = false,
                 errorMessage = "Ошибка валидации"

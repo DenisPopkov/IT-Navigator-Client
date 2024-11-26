@@ -13,15 +13,15 @@ import ru.popkov.android.core.feature.ui.EffectsProvider
 import ru.popkov.android.core.feature.ui.StateDelegate
 import ru.popkov.android.core.feature.ui.StateProvider
 import ru.popkov.navigator.features.auth.domain.repositories.AuthRepository
+import ru.popkov.navigator.features.auth.domain.usecase.ValidateEmail
 import ru.popkov.navigator.features.auth.domain.usecase.ValidatePassword
-import ru.popkov.navigator.features.auth.domain.usecase.ValidatePhoneNumber
 import timber.log.Timber
 import javax.inject.Inject
 
 @HiltViewModel
 class AuthViewModel @Inject constructor(
     private val authRepository: AuthRepository,
-    private val validatePhoneNumber: ValidatePhoneNumber,
+    private val validateEmail: ValidateEmail,
     private val validatePassword: ValidatePassword,
 ) : ViewModel(),
     StateProvider<AuthFormState> by StateDelegate(AuthFormState()),
@@ -36,7 +36,7 @@ class AuthViewModel @Inject constructor(
 
             is AuthViewAction.OnEmailChange -> {
                 viewModelScope.launch {
-                    updateState { copy(phoneNumber = action.phoneNumber) }
+                    updateState { copy(email = action.email) }
                 }
             }
 
@@ -50,10 +50,10 @@ class AuthViewModel @Inject constructor(
                 viewModelScope.launch {
                     updateState {
                         copy(
-                            authGlobalState = if (state.value.authGlobalState == AuthGlobalState.REGISTER_NEW_USER_PHONE_NUMBER) {
+                            authGlobalState = if (state.value.authGlobalState == AuthGlobalState.REGISTER_NEW_USER_EMAIL) {
                                 AuthGlobalState.REGISTER_NEW_USER_PASSWORD
                             } else {
-                                AuthGlobalState.REGISTER_NEW_USER_PHONE_NUMBER
+                                AuthGlobalState.REGISTER_NEW_USER_EMAIL
                             }
                         )
                     }
@@ -64,16 +64,16 @@ class AuthViewModel @Inject constructor(
     }
 
     private fun submitData() {
-        val phoneNumberResult = validatePhoneNumber.invoke(state.value.phoneNumber)
+        val emailResult = validateEmail.invoke(state.value.email)
         val passwordResult = validatePassword.invoke(state.value.password)
 
         when (state.value.authGlobalState) {
-            AuthGlobalState.REGISTER_NEW_USER_PHONE_NUMBER -> {
-                if (phoneNumberResult.errorMessage == null) {
+            AuthGlobalState.REGISTER_NEW_USER_EMAIL -> {
+                if (emailResult.errorMessage == null) {
                     updateState { copy(authGlobalState = AuthGlobalState.REGISTER_NEW_USER_PASSWORD) }
                 } else {
                     viewModelScope.launch {
-                        sendEffect(AuthViewEffect.ShowError(phoneNumberResult.errorMessage ?: ""))
+                        sendEffect(AuthViewEffect.ShowError(emailResult.errorMessage ?: ""))
                     }
                 }
             }
@@ -90,13 +90,13 @@ class AuthViewModel @Inject constructor(
 
             AuthGlobalState.AUTH -> {
                 viewModelScope.launch {
-                    if (phoneNumberResult.errorMessage == null && passwordResult.errorMessage == null) {
+                    if (emailResult.errorMessage == null && passwordResult.errorMessage == null) {
                         loginUserAndNavigateToMain()
                     } else {
-                        if (phoneNumberResult.errorMessage != null) {
+                        if (emailResult.errorMessage != null) {
                             sendEffect(
                                 AuthViewEffect.ShowError(
-                                    phoneNumberResult.errorMessage ?: ""
+                                    emailResult.errorMessage ?: ""
                                 )
                             )
                         } else {
@@ -111,7 +111,7 @@ class AuthViewModel @Inject constructor(
 
     private suspend fun registerAndNavigateToMain() {
         registerNewUser(
-            phoneNumber = state.value.phoneNumber,
+            email = state.value.email,
             password = state.value.password
         ).invokeOnCompletion { error ->
             viewModelScope.launch {
@@ -126,7 +126,7 @@ class AuthViewModel @Inject constructor(
 
     private suspend fun loginUserAndNavigateToMain() {
         loginUser(
-            phoneNumber = state.value.phoneNumber,
+            email = state.value.email,
             password = state.value.password,
         ).invokeOnCompletion { error ->
             viewModelScope.launch {
@@ -140,11 +140,11 @@ class AuthViewModel @Inject constructor(
     }
 
     private suspend fun registerNewUser(
-        phoneNumber: String,
+        email: String,
         password: String
     ): Deferred<AuthOuterClass.RegisterResponse> {
         val request = AuthOuterClass.RegisterRequest.newBuilder()
-            .setPhone(phoneNumber)
+            .setEmail(email)
             .setPassword(password)
             .build()
 
@@ -158,12 +158,12 @@ class AuthViewModel @Inject constructor(
     }
 
     private suspend fun loginUser(
-        phoneNumber: String,
+        email: String,
         password: String,
     ): Deferred<AuthOuterClass.LoginResponse> {
         val request = AuthOuterClass.LoginRequest
             .newBuilder()
-            .setPhone(phoneNumber)
+            .setEmail(email)
             .setPassword(password)
             .build()
 

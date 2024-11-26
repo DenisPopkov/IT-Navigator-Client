@@ -1,5 +1,6 @@
 package ru.popkov.navigator.features.splash.ui
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,7 +12,8 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import kotlinx.coroutines.delay
 import ru.popkov.android.core.feature.ui.UiModePreviews
@@ -33,6 +35,14 @@ internal fun SplashScreen(
             .fillMaxSize()
             .background(color = MaterialTheme.colorScheme.background),
     ) {
+        Image(
+            modifier = Modifier
+                .fillMaxSize(),
+            painter = painterResource(id = R.drawable.login_screen),
+            contentDescription = "Splash screen image",
+            contentScale = ContentScale.Crop,
+        )
+
         Text(
             modifier = Modifier
                 .align(alignment = Alignment.BottomStart)
@@ -40,7 +50,7 @@ internal fun SplashScreen(
                 .padding(start = Theme.size.medium),
             text = stringResource(id = R.string.splash_screen_label),
             style = GothicBoldSplash40,
-            color = Color.Black,
+            color = MaterialTheme.colorScheme.onSurface,
         )
     }
 

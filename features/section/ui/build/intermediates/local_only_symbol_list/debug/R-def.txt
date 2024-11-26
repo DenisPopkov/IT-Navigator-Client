@@ -1,5 +1,5 @@
 R_DEF: Internal format may change without notice
 local
 string title_articles
-string title_authors
-string title_poets
+string title_companies
+string title_courses

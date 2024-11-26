@@ -41,19 +41,19 @@ public final class AppDatabase_Impl extends AppDatabase {
       @Override
       public void createAllTables(@NonNull final SupportSQLiteDatabase db) {
         db.execSQL("CREATE TABLE IF NOT EXISTS `UserData` (`id` INTEGER NOT NULL, `name` TEXT NOT NULL, `image` TEXT NOT NULL, PRIMARY KEY(`id`))");
-        db.execSQL("CREATE TABLE IF NOT EXISTS `Author` (`id` INTEGER NOT NULL, `name` TEXT NOT NULL, `image` TEXT NOT NULL, PRIMARY KEY(`id`))");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `Company` (`id` INTEGER NOT NULL, `name` TEXT NOT NULL, `image` TEXT NOT NULL, PRIMARY KEY(`id`))");
         db.execSQL("CREATE TABLE IF NOT EXISTS `Article` (`id` INTEGER NOT NULL, `name` TEXT NOT NULL, `description` TEXT NOT NULL, `image` TEXT NOT NULL, PRIMARY KEY(`id`))");
-        db.execSQL("CREATE TABLE IF NOT EXISTS `Poet` (`id` INTEGER NOT NULL, `name` TEXT NOT NULL, `image` TEXT NOT NULL, PRIMARY KEY(`id`))");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `Course` (`id` INTEGER NOT NULL, `name` TEXT NOT NULL, `image` TEXT NOT NULL, PRIMARY KEY(`id`))");
         db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '84dc2c244d837046a67763c2da5186d1')");
+        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '1183c7f0e2357015b88e403da1d6b5c7')");
       }
 
       @Override
       public void dropAllTables(@NonNull final SupportSQLiteDatabase db) {
         db.execSQL("DROP TABLE IF EXISTS `UserData`");
-        db.execSQL("DROP TABLE IF EXISTS `Author`");
+        db.execSQL("DROP TABLE IF EXISTS `Company`");
         db.execSQL("DROP TABLE IF EXISTS `Article`");
-        db.execSQL("DROP TABLE IF EXISTS `Poet`");
+        db.execSQL("DROP TABLE IF EXISTS `Course`");
         final List<? extends RoomDatabase.Callback> _callbacks = mCallbacks;
         if (_callbacks != null) {
           for (RoomDatabase.Callback _callback : _callbacks) {
@@ -110,18 +110,18 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Expected:\n" + _infoUserData + "\n"
                   + " Found:\n" + _existingUserData);
         }
-        final HashMap<String, TableInfo.Column> _columnsAuthor = new HashMap<String, TableInfo.Column>(3);
-        _columnsAuthor.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsAuthor.put("name", new TableInfo.Column("name", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsAuthor.put("image", new TableInfo.Column("image", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        final HashSet<TableInfo.ForeignKey> _foreignKeysAuthor = new HashSet<TableInfo.ForeignKey>(0);
-        final HashSet<TableInfo.Index> _indicesAuthor = new HashSet<TableInfo.Index>(0);
-        final TableInfo _infoAuthor = new TableInfo("Author", _columnsAuthor, _foreignKeysAuthor, _indicesAuthor);
-        final TableInfo _existingAuthor = TableInfo.read(db, "Author");
-        if (!_infoAuthor.equals(_existingAuthor)) {
-          return new RoomOpenHelper.ValidationResult(false, "Author(ru.popkov.navigator.features.core.data.local.entities.Author).\n"
-                  + " Expected:\n" + _infoAuthor + "\n"
-                  + " Found:\n" + _existingAuthor);
+        final HashMap<String, TableInfo.Column> _columnsCompany = new HashMap<String, TableInfo.Column>(3);
+        _columnsCompany.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCompany.put("name", new TableInfo.Column("name", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCompany.put("image", new TableInfo.Column("image", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysCompany = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesCompany = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoCompany = new TableInfo("Company", _columnsCompany, _foreignKeysCompany, _indicesCompany);
+        final TableInfo _existingCompany = TableInfo.read(db, "Company");
+        if (!_infoCompany.equals(_existingCompany)) {
+          return new RoomOpenHelper.ValidationResult(false, "Company(ru.popkov.navigator.features.core.data.local.entities.Company).\n"
+                  + " Expected:\n" + _infoCompany + "\n"
+                  + " Found:\n" + _existingCompany);
         }
         final HashMap<String, TableInfo.Column> _columnsArticle = new HashMap<String, TableInfo.Column>(4);
         _columnsArticle.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
@@ -137,22 +137,22 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Expected:\n" + _infoArticle + "\n"
                   + " Found:\n" + _existingArticle);
         }
-        final HashMap<String, TableInfo.Column> _columnsPoet = new HashMap<String, TableInfo.Column>(3);
-        _columnsPoet.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsPoet.put("name", new TableInfo.Column("name", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsPoet.put("image", new TableInfo.Column("image", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        final HashSet<TableInfo.ForeignKey> _foreignKeysPoet = new HashSet<TableInfo.ForeignKey>(0);
-        final HashSet<TableInfo.Index> _indicesPoet = new HashSet<TableInfo.Index>(0);
-        final TableInfo _infoPoet = new TableInfo("Poet", _columnsPoet, _foreignKeysPoet, _indicesPoet);
-        final TableInfo _existingPoet = TableInfo.read(db, "Poet");
-        if (!_infoPoet.equals(_existingPoet)) {
-          return new RoomOpenHelper.ValidationResult(false, "Poet(ru.popkov.navigator.features.core.data.local.entities.Poet).\n"
-                  + " Expected:\n" + _infoPoet + "\n"
-                  + " Found:\n" + _existingPoet);
+        final HashMap<String, TableInfo.Column> _columnsCourse = new HashMap<String, TableInfo.Column>(3);
+        _columnsCourse.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCourse.put("name", new TableInfo.Column("name", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCourse.put("image", new TableInfo.Column("image", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysCourse = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesCourse = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoCourse = new TableInfo("Course", _columnsCourse, _foreignKeysCourse, _indicesCourse);
+        final TableInfo _existingCourse = TableInfo.read(db, "Course");
+        if (!_infoCourse.equals(_existingCourse)) {
+          return new RoomOpenHelper.ValidationResult(false, "Course(ru.popkov.navigator.features.core.data.local.entities.Course).\n"
+                  + " Expected:\n" + _infoCourse + "\n"
+                  + " Found:\n" + _existingCourse);
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "84dc2c244d837046a67763c2da5186d1", "757be3dac3af697fbf81026a4bd6a767");
+    }, "1183c7f0e2357015b88e403da1d6b5c7", "e34b9261692a87b702bb1fa04d6cb32a");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(config.context).name(config.name).callback(_openCallback).build();
     final SupportSQLiteOpenHelper _helper = config.sqliteOpenHelperFactory.create(_sqliteConfig);
     return _helper;
@@ -163,7 +163,7 @@ public final class AppDatabase_Impl extends AppDatabase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     final HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "UserData","Author","Article","Poet");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "UserData","Company","Article","Course");
   }
 
   @Override
@@ -173,9 +173,9 @@ public final class AppDatabase_Impl extends AppDatabase {
     try {
       super.beginTransaction();
       _db.execSQL("DELETE FROM `UserData`");
-      _db.execSQL("DELETE FROM `Author`");
+      _db.execSQL("DELETE FROM `Company`");
       _db.execSQL("DELETE FROM `Article`");
-      _db.execSQL("DELETE FROM `Poet`");
+      _db.execSQL("DELETE FROM `Course`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();

@@ -56,7 +56,7 @@ class SectionViewModel @Inject constructor(
                 copy(
                     authors = authors,
                     articles = null,
-                    poets = null,
+                    courses = null,
                     isLoading = false,
                 )
             }
@@ -82,7 +82,7 @@ class SectionViewModel @Inject constructor(
                 copy(
                     authors = null,
                     articles = articles,
-                    poets = null,
+                    courses = null,
                     isLoading = false,
                 )
             }
@@ -103,12 +103,12 @@ class SectionViewModel @Inject constructor(
 
         viewModelScope.launch(handler) {
             updateState { copy(isLoading = true) }
-            val poets = feedRepository.getPoetsFromLocal()
+            val courses = feedRepository.getPoetsFromLocal()
             updateState {
                 copy(
                     authors = null,
                     articles = null,
-                    poets = poets,
+                    courses = courses,
                     isLoading = false,
                 )
             }

@@ -1,5 +1,6 @@
 package ru.popkov.navigator.features.auth.ui
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -16,6 +17,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -49,7 +51,7 @@ internal fun AuthScreen(
 
     Auth(
         state = state,
-        onPhoneNumberDone = authViewModel::onAction,
+        onEmailDone = authViewModel::onAction,
         onPasswordDone = authViewModel::onAction,
         onCaptionClick = authViewModel::onAction,
         onActionDone = authViewModel::onAction,
@@ -59,13 +61,13 @@ internal fun AuthScreen(
 @Composable
 private fun Auth(
     state: AuthFormState,
-    onPhoneNumberDone: (AuthViewAction) -> Unit = {},
+    onEmailDone: (AuthViewAction) -> Unit = {},
     onPasswordDone: (AuthViewAction) -> Unit = {},
     onCaptionClick: (AuthViewAction) -> Unit = {},
     onActionDone: (AuthViewAction) -> Unit = {},
 ) {
     val titleText = when (state.authGlobalState) {
-        AuthGlobalState.REGISTER_NEW_USER_PHONE_NUMBER, AuthGlobalState.REGISTER_NEW_USER_PASSWORD -> R.string.sign_title
+        AuthGlobalState.REGISTER_NEW_USER_EMAIL, AuthGlobalState.REGISTER_NEW_USER_PASSWORD -> R.string.sign_title
         AuthGlobalState.AUTH -> R.string.auth_title
     }
 
@@ -80,6 +82,14 @@ private fun Auth(
             horizontalAlignment = Alignment.Start,
             verticalArrangement = Arrangement.Top,
         ) {
+            Image(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .align(alignment = Alignment.End),
+                painter = painterResource(id = R.drawable.login_screen),
+                contentDescription = "",
+            )
+
             Text(
                 modifier = Modifier
                     .padding(top = 84.dp),
@@ -89,11 +99,11 @@ private fun Auth(
             )
 
             when (state.authGlobalState) {
-                AuthGlobalState.REGISTER_NEW_USER_PHONE_NUMBER -> {
+                AuthGlobalState.REGISTER_NEW_USER_EMAIL -> {
                     EmailField(
                         modifier = Modifier.padding(top = 72.dp),
                         onEmailDone = onActionDone,
-                        onEmailChange = onPhoneNumberDone,
+                        onEmailChange = onEmailDone,
                     )
                 }
 
@@ -109,7 +119,7 @@ private fun Auth(
                     EmailField(
                         modifier = Modifier.padding(top = 72.dp),
                         onEmailDone = onActionDone,
-                        onEmailChange = onPhoneNumberDone,
+                        onEmailChange = onEmailDone,
                     )
                     PasswordField(
                         modifier = Modifier.padding(top = 18.dp),
@@ -120,7 +130,7 @@ private fun Auth(
             }
 
             val clickAction = when (state.authGlobalState) {
-                AuthGlobalState.REGISTER_NEW_USER_PHONE_NUMBER, AuthGlobalState.REGISTER_NEW_USER_PASSWORD -> AuthViewAction.OnAlreadyHaveAccountClick
+                AuthGlobalState.REGISTER_NEW_USER_EMAIL, AuthGlobalState.REGISTER_NEW_USER_PASSWORD -> AuthViewAction.OnAlreadyHaveAccountClick
                 AuthGlobalState.AUTH -> AuthViewAction.OnNoAccountClick
             }
 
@@ -130,7 +140,7 @@ private fun Auth(
                     .clickable { onCaptionClick.invoke(clickAction) },
                 text = stringResource(
                     id = when (state.authGlobalState) {
-                        AuthGlobalState.REGISTER_NEW_USER_PHONE_NUMBER, AuthGlobalState.REGISTER_NEW_USER_PASSWORD -> R.string.auth_already_have_account
+                        AuthGlobalState.REGISTER_NEW_USER_EMAIL, AuthGlobalState.REGISTER_NEW_USER_PASSWORD -> R.string.auth_already_have_account
                         AuthGlobalState.AUTH -> R.string.auth_no_account
                     }
                 ),

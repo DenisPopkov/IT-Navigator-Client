@@ -146,14 +146,14 @@ internal fun Content(
                     .padding(top = 18.dp),
                 horizontalArrangement = Arrangement.spacedBy(10.dp),
             ) {
-                items(state.authors) { author ->
+                items(state.authors) { company ->
                     Card(
-                        cardImageUrl = author.image,
-                        cardText = author.name,
+                        cardImageUrl = company.image,
+                        cardText = company.name,
                         cardType = CardType.SMALL,
                         onCardActionClick = {
                             onAction.invoke(
-                                SearchViewAction.OnCardClick(author.id)
+                                SearchViewAction.OnCardClick(company.id)
                             )
                         },
                     )
@@ -190,7 +190,7 @@ internal fun Content(
             }
         }
 
-        if (!state.poets.isNullOrEmpty()) {
+        if (!state.courses.isNullOrEmpty()) {
             Section(
                 modifier = Modifier
                     .padding(top = 36.dp),
@@ -204,14 +204,14 @@ internal fun Content(
                     .padding(top = 18.dp),
                 horizontalArrangement = Arrangement.spacedBy(10.dp),
             ) {
-                items(state.poets) { poet ->
+                items(state.courses) { course ->
                     Card(
-                        cardImageUrl = poet.image,
-                        cardText = poet.name,
+                        cardImageUrl = course.image,
+                        cardText = course.name,
                         cardType = CardType.MEDIUM,
                         onCardActionClick = {
                             onAction.invoke(
-                                SearchViewAction.OnCardClick(poet.id)
+                                SearchViewAction.OnCardClick(course.id)
                             )
                         },
                     )

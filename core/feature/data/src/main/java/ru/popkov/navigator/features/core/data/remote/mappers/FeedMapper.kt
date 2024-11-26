@@ -1,10 +1,10 @@
 package ru.popkov.navigator.features.core.data.remote.mappers
 
 import ru.popkov.navigator.features.core.data.local.entities.Article as ArticleEntity
-import ru.popkov.navigator.features.core.data.local.entities.Author as AuthorEntity
-import ru.popkov.navigator.features.core.data.local.entities.Poet as PoetEntity
+import ru.popkov.navigator.features.core.data.local.entities.Company as AuthorEntity
+import ru.popkov.navigator.features.core.data.local.entities.Course as PoetEntity
 import ru.popkov.navigator.features.core.data.remote.dtos.Article as ArticleDto
-import ru.popkov.navigator.features.core.data.remote.dtos.Author as AuthorDto
+import ru.popkov.navigator.features.core.data.remote.dtos.Company as AuthorDto
 import ru.popkov.navigator.features.core.data.remote.dtos.Poet as PoetDto
 
 object FeedMapper {

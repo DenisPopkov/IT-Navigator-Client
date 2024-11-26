@@ -2,12 +2,12 @@ package ru.popkov.android.core.feature.components.core.models
 
 enum class SectionType(val sectionName: String) {
     ALL(sectionName = "все"),
-    AUTHOR(sectionName = "писатели"),
+    COMPANY(sectionName = "писатели"),
     ARTICLE(sectionName = "статьи"),
-    POET(sectionName = "поэты");
+    COURSE(sectionName = "поэты");
 }
 
 data class SectionFilterItem(
-    val sectionType: SectionType = SectionType.AUTHOR,
+    val sectionType: SectionType = SectionType.COMPANY,
     var isSectionSelected: Boolean = false,
 )

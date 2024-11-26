@@ -2,7 +2,7 @@ package ru.popkov.navigator.features.core.data.remote.api
 
 import retrofit2.http.GET
 import ru.popkov.navigator.features.core.data.remote.dtos.Article
-import ru.popkov.navigator.features.core.data.remote.dtos.Author
+import ru.popkov.navigator.features.core.data.remote.dtos.Company
 import ru.popkov.navigator.features.core.data.remote.dtos.Poet
 
 interface FeedApi {
@@ -10,14 +10,14 @@ interface FeedApi {
     @GET("/authors")
     suspend fun getAuthors(
 
-    ): List<Author>
+    ): List<Company>
 
     @GET("/articles")
     suspend fun getArticles(
 
     ): List<Article>
 
-    @GET("/poets")
+    @GET("/courses")
     suspend fun getPoets(
 
     ): List<Poet>

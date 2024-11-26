@@ -10,7 +10,7 @@ service Auth {
 }
 
 message RegisterRequest {
-  string phone = 1; // phone number of the user to register
+  string email = 1; // email number of the user to register
   string password = 2; // password of the user to register
 }
 
@@ -19,7 +19,7 @@ message RegisterResponse {
 }
 
 message LoginRequest {
-  string phone = 1; // phone number of the user to register
+  string email = 1; // email number of the user to register
   string password = 2; // password of the user to register
 }
 

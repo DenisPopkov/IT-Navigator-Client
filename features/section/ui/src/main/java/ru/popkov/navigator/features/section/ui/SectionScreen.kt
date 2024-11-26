@@ -37,9 +37,9 @@ fun SectionScreen(
 
     LaunchedEffect(Unit) {
         when (sectionViewModel.sectionType) {
-            SectionType.AUTHOR -> sectionViewModel.getAuthors()
+            SectionType.COMPANY -> sectionViewModel.getAuthors()
             SectionType.ARTICLE -> sectionViewModel.getArticles()
-            SectionType.POET -> sectionViewModel.getPoets()
+            SectionType.COURSE -> sectionViewModel.getPoets()
             else -> {}
         }
         sectionViewModel.effects
@@ -80,9 +80,9 @@ internal fun SectionDescription(
     ) {
         SectionHeader(
             sectionText = when (sectionType) {
-                SectionType.AUTHOR -> R.string.title_authors
+                SectionType.COMPANY -> R.string.title_companies
                 SectionType.ARTICLE -> R.string.title_articles
-                SectionType.POET -> R.string.title_poets
+                SectionType.COURSE -> R.string.title_courses
                 else -> 0
             },
             onSectionClick = {
@@ -97,14 +97,14 @@ internal fun SectionDescription(
                 verticalArrangement = Arrangement.spacedBy(20.dp),
                 maxItemsInEachRow = 2,
             ) {
-                state.authors.forEach { author ->
+                state.authors.forEach { company ->
                     Card(
-                        cardImageUrl = author.image,
-                        cardText = author.name,
+                        cardImageUrl = company.image,
+                        cardText = company.name,
                         cardType = CardType.SECTION,
                         onCardActionClick = {
                             onAction.invoke(
-                                SectionViewAction.OnCardClick(author.id)
+                                SectionViewAction.OnCardClick(company.id)
                             )
                         },
                     )
@@ -135,7 +135,7 @@ internal fun SectionDescription(
             }
         }
 
-        if (!state.poets.isNullOrEmpty()) {
+        if (!state.courses.isNullOrEmpty()) {
             FlowRow(
                 modifier = Modifier
                     .padding(top = 48.dp),
@@ -143,14 +143,14 @@ internal fun SectionDescription(
                 verticalArrangement = Arrangement.spacedBy(20.dp),
                 maxItemsInEachRow = 2,
             ) {
-                state.poets.forEach { poet ->
+                state.courses.forEach { course ->
                     Card(
-                        cardImageUrl = poet.image,
-                        cardText = poet.name,
+                        cardImageUrl = course.image,
+                        cardText = course.name,
                         cardType = CardType.SECTION,
                         onCardActionClick = {
                             onAction.invoke(
-                                SectionViewAction.OnCardClick(poet.id)
+                                SectionViewAction.OnCardClick(course.id)
                             )
                         },
                     )
@@ -166,7 +166,7 @@ private fun SectionPreview() {
     NavigatorTheme {
         SectionDescription(
             state = SectionState(),
-            sectionType = SectionType.AUTHOR,
+            sectionType = SectionType.COMPANY,
         )
     }
 }

@@ -1,2 +1,3 @@
 ru.popkov.navigator.features.splash.ui
+drawable login_screen
 string splash_screen_label

@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class Poet(
+data class Company(
     @PrimaryKey
     val id: Long,
     val name: String,

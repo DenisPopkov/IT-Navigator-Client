@@ -1,3 +1,4 @@
+int drawable login_screen 0x0
 int string auth_already_have_account 0x0
 int string auth_email 0x0
 int string auth_no_account 0x0

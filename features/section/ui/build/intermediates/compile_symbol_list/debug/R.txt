@@ -1,3 +1,3 @@
 int string title_articles 0x0
-int string title_authors 0x0
-int string title_poets 0x0
+int string title_companies 0x0
+int string title_courses 0x0
