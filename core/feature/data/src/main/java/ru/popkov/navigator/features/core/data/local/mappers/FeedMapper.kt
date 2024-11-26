@@ -2,7 +2,7 @@ package ru.popkov.navigator.features.core.data.local.mappers
 
 import ru.popkov.navigator.features.auth.domain.model.Article as ArticlesDomain
 import ru.popkov.navigator.features.auth.domain.model.Company as AuthorsDomain
-import ru.popkov.navigator.features.auth.domain.model.Poet as PoetsDomain
+import ru.popkov.navigator.features.auth.domain.model.Course as PoetsDomain
 import ru.popkov.navigator.features.core.data.local.entities.Article as ArticlesEntity
 import ru.popkov.navigator.features.core.data.local.entities.Company as AuthorEntity
 import ru.popkov.navigator.features.core.data.local.entities.Company as AuthorsEntity

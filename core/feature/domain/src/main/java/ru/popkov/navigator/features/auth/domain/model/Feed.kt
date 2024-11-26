@@ -18,7 +18,7 @@ data class Article(
 )
 
 @Keep
-data class Poet(
+data class Course(
     val id: Long,
     val name: String,
     val image: String,

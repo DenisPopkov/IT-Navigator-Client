@@ -5,7 +5,7 @@ import ru.popkov.navigator.features.core.data.local.entities.Company as AuthorEn
 import ru.popkov.navigator.features.core.data.local.entities.Course as PoetEntity
 import ru.popkov.navigator.features.core.data.remote.dtos.Article as ArticleDto
 import ru.popkov.navigator.features.core.data.remote.dtos.Company as AuthorDto
-import ru.popkov.navigator.features.core.data.remote.dtos.Poet as PoetDto
+import ru.popkov.navigator.features.core.data.remote.dtos.Course as PoetDto
 
 object FeedMapper {
 

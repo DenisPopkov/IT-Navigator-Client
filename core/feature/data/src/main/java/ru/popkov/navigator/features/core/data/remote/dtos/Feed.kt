@@ -23,7 +23,7 @@ data class Article(
 
 @Keep
 @JsonClass(generateAdapter = true)
-data class Poet(
+data class Course(
     val id: Long,
     val name: String,
     val image: String,

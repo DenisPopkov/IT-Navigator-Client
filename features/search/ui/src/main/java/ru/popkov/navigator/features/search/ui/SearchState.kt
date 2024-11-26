@@ -5,7 +5,7 @@ import ru.popkov.android.core.feature.components.core.models.SectionFilterItem
 import ru.popkov.android.core.feature.components.core.models.SectionType
 import ru.popkov.navigator.features.auth.domain.model.Article
 import ru.popkov.navigator.features.auth.domain.model.Company
-import ru.popkov.navigator.features.auth.domain.model.Poet
+import ru.popkov.navigator.features.auth.domain.model.Course
 
 @Immutable
 internal data class SearchState(
@@ -18,7 +18,7 @@ internal data class SearchState(
     ),
     val authors: List<Company>? = null,
     val articles: List<Article>? = null,
-    val courses: List<Poet>? = null,
+    val courses: List<Course>? = null,
     val isEmptyState: Boolean = false,
     val isLoading: Boolean = false,
 )

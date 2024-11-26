@@ -2,7 +2,7 @@ package ru.popkov.navigator.features.core.data.repositories
 
 import ru.popkov.navigator.features.auth.domain.model.Article
 import ru.popkov.navigator.features.auth.domain.model.Company
-import ru.popkov.navigator.features.auth.domain.model.Poet
+import ru.popkov.navigator.features.auth.domain.model.Course
 import ru.popkov.navigator.features.auth.domain.repositories.FeedRepository
 import ru.popkov.navigator.features.core.data.local.daos.FeedDao
 import ru.popkov.navigator.features.core.data.local.mappers.FeedMapper.toListArticlesDomain
@@ -35,7 +35,7 @@ class FeedRepository @Inject constructor(
         return feedDao.getArticles().toListArticlesDomain()
     }
 
-    override suspend fun getCourses(): List<Poet> {
+    override suspend fun getCourses(): List<Course> {
         val courses = feedApi.getCourses()
         feedDao.addPoets(*courses.toListPoetEntity().toTypedArray())
         return feedDao.getCourses().toListPoetsDomain()
@@ -49,7 +49,7 @@ class FeedRepository @Inject constructor(
         return feedDao.getArticles().toListArticlesDomain()
     }
 
-    override suspend fun getPoetsFromLocal(): List<Poet> {
+    override suspend fun getPoetsFromLocal(): List<Course> {
         return feedDao.getCourses().toListPoetsDomain()
     }
 
