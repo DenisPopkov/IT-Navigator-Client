@@ -10,4 +10,5 @@ dependencies {
     implementation(project(":core:feature:domain"))
     implementation(project(":features:info:nav"))
     implementation(project(":theme"))
+    implementation(project(":features:section:ui"))
 }

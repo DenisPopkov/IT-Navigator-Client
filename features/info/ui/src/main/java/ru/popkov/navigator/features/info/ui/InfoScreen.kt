@@ -47,107 +47,31 @@ fun InfoScreen(
             modifier = Modifier
                 .padding(10.dp)
         ) {
-            when (infoViewModel.sectionType) {
-                SectionType.COURSE -> {
-                    val data = infoViewModel.mockCourses()
-                        .find { it.id.toInt() == infoViewModel.componentId }
-                    AsyncImage(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .height(200.dp),
-                        model = data?.image,
-                        contentDescription = null,
-                        contentScale = ContentScale.Crop,
-                    )
-                    Column(modifier = Modifier.padding(16.dp)) {
-                        Text(
-                            text = data?.name ?: "",
-                            style = MaterialTheme.typography.headlineMedium.copy(
-                                fontWeight = FontWeight.Bold
-                            ),
-                            modifier = Modifier.padding(bottom = 8.dp)
-                        )
+            AsyncImage(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .height(200.dp),
+                model = "",
+                contentDescription = null,
+                contentScale = ContentScale.Crop,
+            )
+            Column(modifier = Modifier.padding(16.dp)) {
+                Text(
+                    text = "",
+                    style = MaterialTheme.typography.headlineMedium.copy(
+                        fontWeight = FontWeight.Bold
+                    ),
+                    modifier = Modifier.padding(bottom = 8.dp)
+                )
 
-                        Text(
-                            text = data?.desc ?: "",
-                            style = MaterialTheme.typography.headlineSmall.copy(
-                                fontWeight = FontWeight.Normal,
-                                fontSize = 16.sp
-                            ),
-                            modifier = Modifier.padding(top = 8.dp)
-                        )
-                    }
-                }
-
-                SectionType.COMPANY -> {
-                    val data = infoViewModel.mockCourses()
-                        .find { it.id.toInt() == infoViewModel.componentId }
-                    AsyncImage(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .height(200.dp),
-                        model = data?.image,
-                        contentDescription = null,
-                        contentScale = ContentScale.Crop,
-                    )
-                    Column(modifier = Modifier.padding(16.dp)) {
-                        Text(
-                            text = data?.name ?: "",
-                            style = MaterialTheme.typography.headlineMedium.copy(
-                                fontWeight = FontWeight.Bold
-                            ),
-                            modifier = Modifier.padding(bottom = 8.dp)
-                        )
-
-                        Text(
-                            text = data?.desc ?: "",
-                            style = MaterialTheme.typography.headlineSmall.copy(
-                                fontWeight = FontWeight.Normal,
-                                fontSize = 16.sp
-                            ),
-                            modifier = Modifier.padding(top = 8.dp)
-                        )
-                    }
-                }
-
-                else -> {
-                    val data = infoViewModel.mockCourses()
-                        .find { it.id.toInt() == infoViewModel.componentId }
-                    AsyncImage(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .height(200.dp),
-                        model = data?.image,
-                        contentDescription = null,
-                        contentScale = ContentScale.Crop,
-                    )
-                    Column(modifier = Modifier.padding(16.dp)) {
-                        Text(
-                            text = data?.name ?: "",
-                            style = MaterialTheme.typography.headlineMedium.copy(
-                                fontWeight = FontWeight.Bold
-                            ),
-                            modifier = Modifier.padding(vertical = 8.dp)
-                        )
-
-                        Text(
-                            text = data?.date ?: "",
-                            style = MaterialTheme.typography.headlineSmall.copy(
-                                fontWeight = FontWeight.Normal
-                            ),
-                            modifier = Modifier.padding(vertical = 4.dp)
-                        )
-
-                        Text(
-                            text = data?.desc ?: "",
-                            style = MaterialTheme.typography.headlineSmall.copy(
-                                fontWeight = FontWeight.Normal,
-                                fontSize = 16.sp
-                            ),
-                            modifier = Modifier.padding(vertical = 8.dp)
-                        )
-                    }
-                }
+                Text(
+                    text = "",
+                    style = MaterialTheme.typography.headlineSmall.copy(
+                        fontWeight = FontWeight.Normal,
+                        fontSize = 16.sp
+                    ),
+                    modifier = Modifier.padding(top = 8.dp)
+                )
             }
         }
     }
