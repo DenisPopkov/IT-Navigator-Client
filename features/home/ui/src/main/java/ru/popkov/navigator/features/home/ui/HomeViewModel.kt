@@ -30,7 +30,7 @@ fun mockCompanies() = listOf(
     Company(
         id = 2,
         name = "Live Typing",
-        image = "https://iili.io/2cWK6uf.md.png"
+        image = "https://iili.io/2cvaHVs.png"
     ),
     Company(
         id = 3,
