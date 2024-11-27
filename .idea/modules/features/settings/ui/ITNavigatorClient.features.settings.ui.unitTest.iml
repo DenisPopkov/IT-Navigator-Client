@@ -64,7 +64,7 @@
     <orderEntry type="module" module-name="ITNavigatorClient.core.feature.ui.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.core.feature.datastore.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.core.feature.domain.main" scope="TEST" />
-    <orderEntry type="module" module-name="ITNavigatorClient.features.settings.nav.main" scope="TEST" />
+    <orderEntry type="module" module-name="ITNavigatorClient.features.home.nav.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.core.feature.nav.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.features.auth.nav.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.theme.main" scope="TEST" />
