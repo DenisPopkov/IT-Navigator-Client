@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.compose.ui:ui-graphics-android:1.6.4@aar" external-system-id="GRADLE">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-4/821bc35ca0ed2908aa5aca00910a6542/transformed/ui-graphics-release/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-4/821bc35ca0ed2908aa5aca00910a6542/transformed/ui-graphics-release/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-4/821bc35ca0ed2908aa5aca00910a6542/transformed/ui-graphics-release/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-4/988e38e79db6fdd24ed34dedb7da0826/transformed/ui-graphics-release/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-4/988e38e79db6fdd24ed34dedb7da0826/transformed/ui-graphics-release/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-4/988e38e79db6fdd24ed34dedb7da0826/transformed/ui-graphics-release/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

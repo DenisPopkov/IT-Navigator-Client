@@ -1,16 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/search/nav/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5906487651976832341.xml:2:13-83
-INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/search/nav/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5906487651976832341.xml:2:13-83
+ADDED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/search/nav/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4345875257038192323.xml:2:13-83
+INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/search/nav/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4345875257038192323.xml:2:13-83
 	package
-		INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/search/nav/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5906487651976832341.xml
+		INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/search/nav/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4345875257038192323.xml
 	xmlns:android
-		ADDED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/search/nav/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5906487651976832341.xml:2:23-81
+		ADDED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/search/nav/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4345875257038192323.xml:2:23-81
 uses-sdk
-INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/search/nav/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5906487651976832341.xml reason: use-sdk injection requested
-INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/search/nav/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5906487651976832341.xml
-INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/search/nav/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5906487651976832341.xml
+INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/search/nav/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4345875257038192323.xml reason: use-sdk injection requested
+INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/search/nav/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4345875257038192323.xml
+INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/search/nav/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4345875257038192323.xml
 	android:targetSdkVersion
-		INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/search/nav/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5906487651976832341.xml
+		INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/search/nav/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4345875257038192323.xml
 	android:minSdkVersion
-		INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/search/nav/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5906487651976832341.xml
+		INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/search/nav/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4345875257038192323.xml

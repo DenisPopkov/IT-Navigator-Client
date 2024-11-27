@@ -1,16 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/splash/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest118908917208323602.xml:2:13-83
-INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/splash/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest118908917208323602.xml:2:13-83
+ADDED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/splash/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3832767410917394228.xml:2:13-83
+INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/splash/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3832767410917394228.xml:2:13-83
 	package
-		INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/splash/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest118908917208323602.xml
+		INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/splash/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3832767410917394228.xml
 	xmlns:android
-		ADDED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/splash/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest118908917208323602.xml:2:23-81
+		ADDED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/splash/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3832767410917394228.xml:2:23-81
 uses-sdk
-INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/splash/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest118908917208323602.xml reason: use-sdk injection requested
-INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/splash/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest118908917208323602.xml
-INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/splash/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest118908917208323602.xml
+INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/splash/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3832767410917394228.xml reason: use-sdk injection requested
+INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/splash/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3832767410917394228.xml
+INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/splash/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3832767410917394228.xml
 	android:targetSdkVersion
-		INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/splash/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest118908917208323602.xml
+		INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/splash/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3832767410917394228.xml
 	android:minSdkVersion
-		INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/splash/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest118908917208323602.xml
+		INJECTED from /Users/denispopkov/AndroidStudioProjects/IT-Navigator-Client/features/splash/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3832767410917394228.xml
