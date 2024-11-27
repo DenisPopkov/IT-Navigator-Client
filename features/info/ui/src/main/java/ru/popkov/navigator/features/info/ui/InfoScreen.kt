@@ -1,9 +1,11 @@
 package ru.popkov.navigator.features.info.ui
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
@@ -17,14 +19,22 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.AsyncImage
 import ru.popkov.android.core.feature.components.core.SectionHeader
 import ru.popkov.android.core.feature.components.core.models.SectionType
-import ru.popkov.navigator.features.section.ui.R
 
 @Composable
 fun InfoScreen(
     infoViewModel: InfoViewModel = hiltViewModel(),
 ) {
-    Column {
-        SectionDescription(sectionType = infoViewModel.sectionType)
+    Column() {
+        SectionDescription(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(color = MaterialTheme.colorScheme.background)
+                .verticalScroll(rememberScrollState())
+                .statusBarsPadding()
+                .padding(vertical = 30.dp)
+                .padding(horizontal = 16.dp),
+            sectionType = infoViewModel.sectionType,
+        )
 
         Column(
             modifier = Modifier
@@ -34,7 +44,8 @@ fun InfoScreen(
         ) {
             when (infoViewModel.sectionType) {
                 SectionType.COURSE -> {
-                    val data = infoViewModel.mockCourses().find { it.id.toInt() == infoViewModel.componentId }
+                    val data = infoViewModel.mockCourses()
+                        .find { it.id.toInt() == infoViewModel.componentId }
                     AsyncImage(
                         modifier = Modifier
                             .fillMaxSize()
@@ -55,7 +66,8 @@ fun InfoScreen(
                 }
 
                 SectionType.COMPANY -> {
-                    val data = infoViewModel.mockCourses().find { it.id.toInt() == infoViewModel.componentId }
+                    val data = infoViewModel.mockCourses()
+                        .find { it.id.toInt() == infoViewModel.componentId }
                     AsyncImage(
                         modifier = Modifier
                             .fillMaxSize()
@@ -76,7 +88,8 @@ fun InfoScreen(
                 }
 
                 else -> {
-                    val data = infoViewModel.mockCourses().find { it.id.toInt() == infoViewModel.componentId }
+                    val data = infoViewModel.mockCourses()
+                        .find { it.id.toInt() == infoViewModel.componentId }
                     AsyncImage(
                         modifier = Modifier
                             .fillMaxSize()

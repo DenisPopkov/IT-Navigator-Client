@@ -39,5 +39,5 @@ data class InfoDestination(
     }
 
     override fun toString() =
-        "$infoRoute?$sectionArg=$sectionType&$itemArg={$componentId}"
+        "$infoRoute?$sectionArg=$sectionType&$itemArg=${componentId ?: "null"}"
 }
