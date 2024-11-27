@@ -34,6 +34,8 @@ include(
     ":features:settings:ui",
     ":features:section:nav",
     ":features:section:ui",
+    ":features:info:nav",
+    ":features:info:ui",
     ":features:auth:nav",
     ":features:auth:ui",
     ":features:splash:nav",

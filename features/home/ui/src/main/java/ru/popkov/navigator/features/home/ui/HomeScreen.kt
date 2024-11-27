@@ -38,7 +38,7 @@ import ru.popkov.navigator.theme.NavigatorThemeInfinite
 internal fun HomeScreen(
     snackbarHostState: SnackbarHostState,
     homeViewModel: HomeViewModel = hiltViewModel(),
-    onCardClick: (cardId: Long) -> Unit = {},
+    onCardClick: (cardId: Int, sectionId: Int) -> Unit,
     onSectionClick: (sectionId: Int) -> Unit = {},
 ) {
     val state by homeViewModel.state.collectAsState()
@@ -51,7 +51,7 @@ internal fun HomeScreen(
                     is HomeViewEffect.ShowError ->
                         snackbarHostState.showSnackbar(effect.errorMessage)
 
-                    is HomeViewEffect.OnCardClick -> onCardClick.invoke(effect.cardId)
+                    is HomeViewEffect.OnCardClick -> onCardClick.invoke(effect.cardId.toInt(), 0)
                     is HomeViewEffect.OnSectionClick -> onSectionClick.invoke(effect.sectionId)
                 }
             }
@@ -126,7 +126,7 @@ private fun Home(
                     cardType = CardType.SMALL,
                     onCardActionClick = {
                         onAction.invoke(
-                            HomeViewAction.OnCardClick(company.id)
+                            HomeViewAction.OnCardClick(company.id, 0)
                         )
                     },
                 )
@@ -155,7 +155,7 @@ private fun Home(
                     cardType = CardType.LARGE,
                     onCardActionClick = {
                         onAction.invoke(
-                            HomeViewAction.OnCardClick(article.id)
+                            HomeViewAction.OnCardClick(article.id, 1)
                         )
                     },
                 )
@@ -184,7 +184,7 @@ private fun Home(
                     cardType = CardType.MEDIUM,
                     onCardActionClick = {
                         onAction.invoke(
-                            HomeViewAction.OnCardClick(course.id)
+                            HomeViewAction.OnCardClick(course.id, 2)
                         )
                     },
                 )

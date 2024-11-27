@@ -12,6 +12,8 @@ import ru.popkov.android.core.feature.ui.NavProvider
 import ru.popkov.datastore.settings.Settings
 import ru.popkov.navigator.features.home.nav.HomeDestination
 import ru.popkov.navigator.features.home.nav.R
+import ru.popkov.navigator.features.info.ui.InfoDestination
+import ru.popkov.navigator.features.info.ui.InfoScreen
 import ru.popkov.navigator.features.section.ui.SectionDestination
 import ru.popkov.navigator.features.section.ui.SectionScreen
 import ru.popkov.navigator.theme.NavigatorThemeInfinite
@@ -47,8 +49,8 @@ class HomeNavProvider @Inject constructor(
                     ) {
                         HomeScreen(
                             snackbarHostState = snackbarHostState,
-                            onCardClick = {
-
+                            onCardClick = { cardId, sectionId ->
+                                navigator.navigate(InfoDestination(cardId, sectionId))
                             },
                             onSectionClick = {
                                 navigator.navigate(SectionDestination(it))
@@ -68,6 +70,13 @@ class HomeNavProvider @Inject constructor(
                             navigator.onBackClick()
                         }
                     )
+                }
+
+                composable(
+                    route = InfoDestination.route,
+                    arguments = InfoDestination.args
+                ) {
+                    InfoScreen()
                 }
             }
         }
