@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.ui.draw.alpha
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.pager.HorizontalPager
@@ -49,7 +50,8 @@ fun Carousel(
         Box {
             AsyncImage(
                 modifier = Modifier
-                    .fillMaxSize(),
+                    .fillMaxSize()
+                    .alpha(0.7f),
                 model = carouselItems[page].articleImage,
                 fallback = painterResource(id = R.drawable.ic_article),
                 contentDescription = null,
@@ -92,34 +94,5 @@ fun Carousel(
                 }
             }
         }
-    }
-}
-
-@UiModePreviews
-@Composable
-private fun CarouselPreview() {
-    NavigatorTheme {
-        Carousel(
-            carouselItems = listOf(
-                Carousel(
-                    id = 0,
-                    articleTitle = "реализм в\nлитературе",
-                    articleDescription = "В СТАТЬЕ РАССКАЗЫВАЕМ ПРО АВТОРОВ И\nКЛЮЧЕВЫЕ ПРОИЗВЕДЕНИЯ В ЭТОМ\nНАПРАВЛЕНИИ",
-                    articleImage = "",
-                ),
-                Carousel(
-                    id = 1,
-                    articleTitle = "реализм в\nлитературе (2)",
-                    articleDescription = "В СТАТЬЕ РАССКАЗЫВАЕМ ПРО АВТОРОВ И\nКЛЮЧЕВЫЕ ПРОИЗВЕДЕНИЯ В ЭТОМ\nНАПРАВЛЕНИИ",
-                    articleImage = "",
-                ),
-                Carousel(
-                    id = 2,
-                    articleTitle = "реализм в\nлитературе (3)",
-                    articleDescription = "В СТАТЬЕ РАССКАЗЫВАЕМ ПРО АВТОРОВ И\nКЛЮЧЕВЫЕ ПРОИЗВЕДЕНИЯ В ЭТОМ\nНАПРАВЛЕНИИ",
-                    articleImage = "",
-                ),
-            )
-        )
     }
 }
