@@ -66,6 +66,7 @@
     <orderEntry type="module" module-name="ITNavigatorClient.core.feature.domain.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.features.section.nav.main" scope="TEST" />
     <orderEntry type="module" module-name="nav.ITNavigatorClient.core.feature.nav.main" scope="TEST" />
+    <orderEntry type="module" module-name="ITNavigatorClient.features.info.nav.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.theme.main" scope="TEST" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.compose.ui:ui-tooling-android:1.6.4@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.compose.runtime:runtime-android:1.6.4@aar" level="project" />

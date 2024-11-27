@@ -36,6 +36,9 @@
             <option value="$PROJECT_DIR$/features/home" />
             <option value="$PROJECT_DIR$/features/home/nav" />
             <option value="$PROJECT_DIR$/features/home/ui" />
+            <option value="$PROJECT_DIR$/features/info" />
+            <option value="$PROJECT_DIR$/features/info/nav" />
+            <option value="$PROJECT_DIR$/features/info/ui" />
             <option value="$PROJECT_DIR$/features/search" />
             <option value="$PROJECT_DIR$/features/search/nav" />
             <option value="$PROJECT_DIR$/features/search/ui" />

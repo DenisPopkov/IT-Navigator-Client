@@ -84,6 +84,7 @@
     <orderEntry type="module" module-name="nav.ITNavigatorClient.core.feature.nav.main" />
     <orderEntry type="module" module-name="ITNavigatorClient.features.home.nav.main" />
     <orderEntry type="module" module-name="ui.ITNavigatorClient.features.section.ui.main" />
+    <orderEntry type="module" module-name="ITNavigatorClient.features.info.ui.main" />
     <orderEntry type="module" module-name="ITNavigatorClient.theme.main" />
     <orderEntry type="library" name="Gradle: androidx.compose.ui:ui-tooling-android:1.6.4@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.compose.runtime:runtime-android:1.6.4@aar" level="project" />

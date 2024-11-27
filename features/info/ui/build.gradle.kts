@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "ru.popkov.navigator.features.section.ui"
+    namespace = "ru.popkov.navigator.features.info.ui"
 }
 
 dependencies {
