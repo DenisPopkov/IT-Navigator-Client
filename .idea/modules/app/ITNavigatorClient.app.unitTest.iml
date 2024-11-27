@@ -61,13 +61,13 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="ITNavigatorClient.app.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.core.feature.ui.main" scope="TEST" />
-    <orderEntry type="module" module-name="ITNavigatorClient.core.feature.nav.main" scope="TEST" />
+    <orderEntry type="module" module-name="nav.ITNavigatorClient.core.feature.nav.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.core.feature.data.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.features.home.ui.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.features.search.ui.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.features.settings.ui.main" scope="TEST" />
-    <orderEntry type="module" module-name="ITNavigatorClient.features.splash.ui.main" scope="TEST" />
-    <orderEntry type="module" module-name="ITNavigatorClient.features.auth.ui.main" scope="TEST" />
+    <orderEntry type="module" module-name="ui.ITNavigatorClient.features.splash.ui.main" scope="TEST" />
+    <orderEntry type="module" module-name="ui.ITNavigatorClient.features.auth.ui.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.features.auth.nav.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.core.feature.datastore.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.theme.main" scope="TEST" />

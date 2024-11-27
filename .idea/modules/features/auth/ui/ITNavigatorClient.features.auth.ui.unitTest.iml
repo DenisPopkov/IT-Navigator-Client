@@ -60,11 +60,11 @@
     <content url="file://$MODULE_DIR$/../../../../../features/auth/ui/src/testDebug" />
     <orderEntry type="jdk" jdkName="Android API 34, extension level 7 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="ITNavigatorClient.features.auth.ui.main" scope="TEST" />
+    <orderEntry type="module" module-name="ui.ITNavigatorClient.features.auth.ui.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.core.feature.ui.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.core.feature.datastore.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.features.auth.nav.main" scope="TEST" />
-    <orderEntry type="module" module-name="ITNavigatorClient.core.feature.nav.main" scope="TEST" />
+    <orderEntry type="module" module-name="nav.ITNavigatorClient.core.feature.nav.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.core.feature.domain.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.features.home.nav.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.theme.main" scope="TEST" />

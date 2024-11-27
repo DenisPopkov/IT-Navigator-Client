@@ -60,12 +60,12 @@
     <content url="file://$MODULE_DIR$/../../../../../features/section/ui/src/testDebug" />
     <orderEntry type="jdk" jdkName="Android API 34, extension level 7 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="ITNavigatorClient.features.section.ui.main" scope="TEST" />
+    <orderEntry type="module" module-name="ui.ITNavigatorClient.features.section.ui.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.core.feature.ui.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.core.feature.datastore.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.core.feature.domain.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.features.section.nav.main" scope="TEST" />
-    <orderEntry type="module" module-name="ITNavigatorClient.core.feature.nav.main" scope="TEST" />
+    <orderEntry type="module" module-name="nav.ITNavigatorClient.core.feature.nav.main" scope="TEST" />
     <orderEntry type="module" module-name="ITNavigatorClient.theme.main" scope="TEST" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.compose.ui:ui-tooling-android:1.6.4@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.compose.runtime:runtime-android:1.6.4@aar" level="project" />
