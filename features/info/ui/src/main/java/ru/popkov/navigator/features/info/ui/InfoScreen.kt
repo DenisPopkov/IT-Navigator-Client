@@ -23,24 +23,28 @@ import ru.popkov.android.core.feature.components.core.models.SectionType
 @Composable
 fun InfoScreen(
     infoViewModel: InfoViewModel = hiltViewModel(),
+    onBackClick: () -> Unit,
 ) {
-    Column() {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .statusBarsPadding()
+            .background(color = MaterialTheme.colorScheme.background)
+            .verticalScroll(rememberScrollState())
+            .padding(vertical = 30.dp)
+            .padding(horizontal = 16.dp),
+    ) {
         SectionDescription(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(color = MaterialTheme.colorScheme.background)
-                .verticalScroll(rememberScrollState())
-                .statusBarsPadding()
-                .padding(vertical = 30.dp)
-                .padding(horizontal = 16.dp),
+            modifier = Modifier,
             sectionType = infoViewModel.sectionType,
+            onAction = {
+                onBackClick.invoke()
+            }
         )
 
         Column(
             modifier = Modifier
                 .padding(10.dp)
-                .fillMaxSize()
-                .verticalScroll(rememberScrollState())
         ) {
             when (infoViewModel.sectionType) {
                 SectionType.COURSE -> {

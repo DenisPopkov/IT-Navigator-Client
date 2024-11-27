@@ -50,6 +50,7 @@ class HomeNavProvider @Inject constructor(
                         HomeScreen(
                             snackbarHostState = snackbarHostState,
                             onCardClick = { cardId, sectionId ->
+                                println("efefe $cardId, $sectionId")
                                 navigator.navigate(InfoDestination(cardId, sectionId))
                             },
                             onSectionClick = {
@@ -76,7 +77,11 @@ class HomeNavProvider @Inject constructor(
                     route = InfoDestination.route,
                     arguments = InfoDestination.args
                 ) {
-                    InfoScreen()
+                    InfoScreen(
+                        onBackClick = {
+                            navigator.onBackClick()
+                        }
+                    )
                 }
             }
         }
