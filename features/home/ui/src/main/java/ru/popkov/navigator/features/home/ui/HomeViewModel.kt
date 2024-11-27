@@ -9,9 +9,63 @@ import ru.popkov.android.core.feature.ui.EffectsDelegate
 import ru.popkov.android.core.feature.ui.EffectsProvider
 import ru.popkov.android.core.feature.ui.StateDelegate
 import ru.popkov.android.core.feature.ui.StateProvider
+import ru.popkov.navigator.features.auth.domain.model.Article
+import ru.popkov.navigator.features.auth.domain.model.Company
+import ru.popkov.navigator.features.auth.domain.model.Course
 import ru.popkov.navigator.features.auth.domain.repositories.FeedRepository
 import timber.log.Timber
 import javax.inject.Inject
+
+fun mockCompanies() = listOf(
+    Company(
+        id = 0,
+        name = "7bits",
+        image = "https://iili.io/2cWKYTx.md.png"
+    ),
+    Company(
+        id = 1,
+        name = "Deeplay",
+        image = "https://iili.io/2cWK6uf.md.png"
+    ),
+    Company(
+        id = 2,
+        name = "Live Typing",
+        image = "https://iili.io/2cWK6uf.md.png"
+    ),
+    Company(
+        id = 3,
+        name = "Effective",
+        image = "https://iili.io/2cWBxBp.png"
+    )
+)
+
+fun mockFeed() = listOf(
+    Article(
+        id = 0,
+        name = "Омская область установила рекорд по участию в «Цифровом диктанте»",
+        description = "Омская область установила рекорд по участию в «Цифровом диктанте»",
+        image = "https://iili.io/2cVyc92.md.png"
+    ),
+    Article(
+        id = 1,
+        name = "Омские айтишники приняли участие в «Мама, папа, я — ИТ-семья»",
+        description = "Омская область установила рекорд по участию в «Цифровом диктанте»",
+        image = "https://iili.io/2cW2NQS.md.png"
+    ),
+)
+
+fun mockCourses() = listOf(
+    Course(
+        id = 0,
+        name = "Омская IT-академия",
+        image = "https://iili.io/2cW3OAv.md.png"
+    ),
+    Course(
+        id = 1,
+        name = "KIBERone Омск",
+        image = "https://iili.io/2cWFn0F.md.png"
+    ),
+)
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
@@ -51,9 +105,9 @@ class HomeViewModel @Inject constructor(
             if (authorsFromLocal.isNotEmpty() && articlesFromLocal.isNotEmpty() && poetsFromLocal.isNotEmpty()) {
                 updateState {
                     copy(
-                        authors = authorsFromLocal,
-                        articles = articlesFromLocal,
-                        courses = poetsFromLocal,
+                        authors = mockCompanies(),
+                        articles = mockFeed(),
+                        courses = mockCourses(),
                         isLoading = false,
                     )
                 }
@@ -64,9 +118,9 @@ class HomeViewModel @Inject constructor(
 
                 updateState {
                     copy(
-                        authors = authors,
-                        articles = articles,
-                        courses = courses,
+                        authors = mockCompanies(),
+                        articles = mockFeed(),
+                        courses = mockCourses(),
                         isLoading = false,
                     )
                 }
@@ -75,7 +129,7 @@ class HomeViewModel @Inject constructor(
             viewModelScope.launch {
                 if (it != null) {
                     updateState { copy(isLoading = false) }
-                    sendEffect(HomeViewEffect.ShowError("Произошла ошибка!"))
+//                    sendEffect(HomeViewEffect.ShowError("Произошла ошибка!"))
                 }
             }
         }
