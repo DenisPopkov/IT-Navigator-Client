@@ -77,8 +77,8 @@ class SettingsViewModel @Inject constructor(
             val settings = settingsRepository.getSettings()
             updateState {
                 copy(
-                    userName = settings.name,
-                    userImage = settings.image,
+                    userName = "Профиль",
+                    userImage = "https://iili.io/2cW3OAv.md.png",
                     isLoading = false,
                 )
             }
@@ -86,7 +86,7 @@ class SettingsViewModel @Inject constructor(
             viewModelScope.launch {
                 if (it != null) {
                     updateState { copy(isLoading = false) }
-                    sendEffect(SettingsViewEffect.ShowError("Произошла ошибка!"))
+//                    sendEffect(SettingsViewEffect.ShowError("Произошла ошибка!"))
                 }
             }
         }

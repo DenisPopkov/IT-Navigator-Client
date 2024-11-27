@@ -11,9 +11,63 @@ import ru.popkov.android.core.feature.ui.EffectsDelegate
 import ru.popkov.android.core.feature.ui.EffectsProvider
 import ru.popkov.android.core.feature.ui.StateDelegate
 import ru.popkov.android.core.feature.ui.StateProvider
+import ru.popkov.navigator.features.auth.domain.model.Article
+import ru.popkov.navigator.features.auth.domain.model.Company
+import ru.popkov.navigator.features.auth.domain.model.Course
 import ru.popkov.navigator.features.auth.domain.repositories.FeedRepository
 import timber.log.Timber
 import javax.inject.Inject
+
+fun mockCompanies() = listOf(
+    Company(
+        id = 0,
+        name = "7bits",
+        image = "https://iili.io/2cWKYTx.md.png"
+    ),
+    Company(
+        id = 1,
+        name = "Deeplay",
+        image = "https://iili.io/2cWK6uf.md.png"
+    ),
+    Company(
+        id = 2,
+        name = "Live Typing",
+        image = "https://iili.io/2cWK6uf.md.png"
+    ),
+    Company(
+        id = 3,
+        name = "Effective",
+        image = "https://iili.io/2cWBxBp.png"
+    )
+)
+
+fun mockFeed() = listOf(
+    Article(
+        id = 0,
+        name = "Омская область установила рекорд по участию в «Цифровом диктанте»",
+        description = "Омская область установила рекорд по участию в «Цифровом диктанте»",
+        image = "https://iili.io/2cVyc92.md.png"
+    ),
+    Article(
+        id = 1,
+        name = "Омские айтишники приняли участие в «Мама, папа, я — ИТ-семья»",
+        description = "Омская область установила рекорд по участию в «Цифровом диктанте»",
+        image = "https://iili.io/2cW2NQS.md.png"
+    ),
+)
+
+fun mockCourses() = listOf(
+    Course(
+        id = 0,
+        name = "Омская IT-академия",
+        image = "https://iili.io/2cW3OAv.md.png"
+    ),
+    Course(
+        id = 1,
+        name = "KIBERone Омск",
+        image = "https://iili.io/2cWFn0F.md.png"
+    ),
+)
 
 @HiltViewModel
 class SearchViewModel @Inject constructor(
@@ -84,11 +138,11 @@ class SearchViewModel @Inject constructor(
         viewModelScope.launch(handler) {
             updateState { copy(isLoading = true) }
             val authors =
-                feedRepository.getAuthorsFromLocal().filter { it.name.contains(filter ?: it.name) }
-            val articles = feedRepository.getArticlesFromLocal()
+                mockCompanies().filter { it.name.contains(filter ?: it.name) }
+            val articles = mockFeed()
                 .filter { it.name.contains((filter ?: it.name)) }
             val courses =
-                feedRepository.getPoetsFromLocal().filter { it.name.contains((filter ?: it.name)) }
+                mockCourses().filter { it.name.contains((filter ?: it.name)) }
             updateState {
                 copy(
                     authors = authors,
@@ -102,7 +156,7 @@ class SearchViewModel @Inject constructor(
             viewModelScope.launch {
                 if (it != null) {
                     updateState { copy(isLoading = false) }
-                    sendEffect(SearchViewEffect.ShowError("Произошла ошибка!"))
+//                    sendEffect(SearchViewEffect.ShowError("Произошла ошибка!"))
                 }
             }
         }
@@ -115,7 +169,7 @@ class SearchViewModel @Inject constructor(
 
         viewModelScope.launch(handler) {
             updateState { copy(isLoading = true) }
-            val authors = feedRepository.getAuthorsFromLocal()
+            val authors = mockCompanies()
             updateState {
                 copy(
                     authors = authors.filter { it.name.contains((filter ?: it.name)) },
@@ -129,7 +183,7 @@ class SearchViewModel @Inject constructor(
             viewModelScope.launch {
                 if (it != null) {
                     updateState { copy(isLoading = false) }
-                    sendEffect(SearchViewEffect.ShowError("Произошла ошибка!"))
+//                    sendEffect(SearchViewEffect.ShowError("Произошла ошибка!"))
                 }
             }
         }
@@ -142,7 +196,7 @@ class SearchViewModel @Inject constructor(
 
         viewModelScope.launch(handler) {
             updateState { copy(isLoading = true) }
-            val articles = feedRepository.getArticlesFromLocal()
+            val articles = mockFeed()
             updateState {
                 copy(
                     authors = null,
@@ -156,7 +210,7 @@ class SearchViewModel @Inject constructor(
             viewModelScope.launch {
                 if (it != null) {
                     updateState { copy(isLoading = false) }
-                    sendEffect(SearchViewEffect.ShowError("Произошла ошибка!"))
+//                    sendEffect(SearchViewEffect.ShowError("Произошла ошибка!"))
                 }
             }
         }
@@ -169,7 +223,7 @@ class SearchViewModel @Inject constructor(
 
         viewModelScope.launch(handler) {
             updateState { copy(isLoading = true) }
-            val courses = feedRepository.getPoetsFromLocal()
+            val courses = mockCourses()
             updateState {
                 copy(
                     authors = null,
@@ -183,7 +237,7 @@ class SearchViewModel @Inject constructor(
             viewModelScope.launch {
                 if (it != null) {
                     updateState { copy(isLoading = false) }
-                    sendEffect(SearchViewEffect.ShowError("Произошла ошибка!"))
+//                    sendEffect(SearchViewEffect.ShowError("Произошла ошибка!"))
                 }
             }
         }

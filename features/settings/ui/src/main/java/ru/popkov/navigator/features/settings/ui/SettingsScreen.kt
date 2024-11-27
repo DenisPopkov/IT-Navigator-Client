@@ -105,7 +105,7 @@ internal fun Settings(
                 .clip(shape = CircleShape)
                 .align(Alignment.CenterHorizontally),
             fallback = painterResource(id = R.drawable.ic_placeholder),
-            model = state.userImage,
+            model = "https://iili.io/2cW3OAv.md.png",
             contentDescription = null,
             contentScale = ContentScale.Crop,
         )
@@ -113,7 +113,7 @@ internal fun Settings(
             modifier = Modifier
                 .padding(top = 20.dp)
                 .align(Alignment.CenterHorizontally),
-            text = state.userName.split(" ").joinToString("\n"),
+            text = "Профиль",
             style = FormularMedium28,
             textAlign = TextAlign.Center,
             color = MaterialTheme.colorScheme.onSurface,
