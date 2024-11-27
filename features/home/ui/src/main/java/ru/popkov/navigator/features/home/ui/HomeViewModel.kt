@@ -129,6 +129,14 @@ class HomeViewModel @Inject constructor(
             viewModelScope.launch {
                 if (it != null) {
                     updateState { copy(isLoading = false) }
+                    updateState {
+                        copy(
+                            authors = mockCompanies(),
+                            articles = mockFeed(),
+                            courses = mockCourses(),
+                            isLoading = false,
+                        )
+                    }
 //                    sendEffect(HomeViewEffect.ShowError("Произошла ошибка!"))
                 }
             }
