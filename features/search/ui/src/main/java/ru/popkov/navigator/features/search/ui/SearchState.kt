@@ -16,7 +16,7 @@ internal data class SearchState(
         SectionFilterItem(sectionType = SectionType.ARTICLE),
         SectionFilterItem(sectionType = SectionType.COURSE),
     ),
-    val authors: List<Company>? = null,
+    val companies: List<Company>? = null,
     val articles: List<Article>? = null,
     val courses: List<Course>? = null,
     val isEmptyState: Boolean = false,

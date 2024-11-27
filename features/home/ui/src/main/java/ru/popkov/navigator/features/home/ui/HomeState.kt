@@ -7,7 +7,7 @@ import ru.popkov.navigator.features.auth.domain.model.Course
 
 @Immutable
 internal data class HomeState(
-    val authors: List<Company>? = null,
+    val companies: List<Company>? = null,
     val articles: List<Article>? = null,
     val courses: List<Course>? = null,
     val isLoading: Boolean = false,

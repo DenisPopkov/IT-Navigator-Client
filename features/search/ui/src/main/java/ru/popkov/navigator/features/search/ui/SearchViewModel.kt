@@ -137,7 +137,7 @@ class SearchViewModel @Inject constructor(
 
         viewModelScope.launch(handler) {
             updateState { copy(isLoading = true) }
-            val authors =
+            val companies =
                 mockCompanies().filter { it.name.contains(filter ?: it.name) }
             val articles = mockFeed()
                 .filter { it.name.contains((filter ?: it.name)) }
@@ -145,10 +145,10 @@ class SearchViewModel @Inject constructor(
                 mockCourses().filter { it.name.contains((filter ?: it.name)) }
             updateState {
                 copy(
-                    authors = authors,
+                    companies = companies,
                     articles = articles,
                     courses = courses,
-                    isEmptyState = authors.isEmpty() && articles.isEmpty() && courses.isEmpty(),
+                    isEmptyState = companies.isEmpty() && articles.isEmpty() && courses.isEmpty(),
                     isLoading = false,
                 )
             }
@@ -169,13 +169,13 @@ class SearchViewModel @Inject constructor(
 
         viewModelScope.launch(handler) {
             updateState { copy(isLoading = true) }
-            val authors = mockCompanies()
+            val companies = mockCompanies()
             updateState {
                 copy(
-                    authors = authors.filter { it.name.contains((filter ?: it.name)) },
+                    companies = companies.filter { it.name.contains((filter ?: it.name)) },
                     articles = null,
                     courses = null,
-                    isEmptyState = authors.isEmpty(),
+                    isEmptyState = companies.isEmpty(),
                     isLoading = false,
                 )
             }
@@ -199,7 +199,7 @@ class SearchViewModel @Inject constructor(
             val articles = mockFeed()
             updateState {
                 copy(
-                    authors = null,
+                    companies = null,
                     articles = articles.filter { it.name.contains((filter ?: it.name)) },
                     courses = null,
                     isEmptyState = articles.isEmpty(),
@@ -226,7 +226,7 @@ class SearchViewModel @Inject constructor(
             val courses = mockCourses()
             updateState {
                 copy(
-                    authors = null,
+                    companies = null,
                     articles = null,
                     courses = courses.filter { it.name.contains((filter ?: it.name)) },
                     isEmptyState = courses.isEmpty(),

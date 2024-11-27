@@ -119,7 +119,7 @@ private fun Home(
                 .padding(horizontal = 16.dp),
             horizontalArrangement = Arrangement.spacedBy(10.dp),
         ) {
-            items(state.authors ?: emptyList()) { company ->
+            items(state.companies ?: emptyList()) { company ->
                 Card(
                     cardImageUrl = company.image,
                     cardText = company.name,

@@ -132,7 +132,7 @@ internal fun Content(
     Column(
         modifier = modifier,
     ) {
-        if (!state.authors.isNullOrEmpty()) {
+        if (!state.companies.isNullOrEmpty()) {
             Section(
                 modifier = Modifier
                     .padding(top = 30.dp),
@@ -146,7 +146,7 @@ internal fun Content(
                     .padding(top = 18.dp),
                 horizontalArrangement = Arrangement.spacedBy(10.dp),
             ) {
-                items(state.authors) { company ->
+                items(state.companies) { company ->
                     Card(
                         cardImageUrl = company.image,
                         cardText = company.name,

@@ -105,20 +105,20 @@ class HomeViewModel @Inject constructor(
             if (authorsFromLocal.isNotEmpty() && articlesFromLocal.isNotEmpty() && poetsFromLocal.isNotEmpty()) {
                 updateState {
                     copy(
-                        authors = mockCompanies(),
+                        companies = mockCompanies(),
                         articles = mockFeed(),
                         courses = mockCourses(),
                         isLoading = false,
                     )
                 }
             } else {
-                val authors = feedRepository.getCompanies()
+                val companies = feedRepository.getCompanies()
                 val articles = feedRepository.getArticles()
                 val courses = feedRepository.getCourses()
 
                 updateState {
                     copy(
-                        authors = mockCompanies(),
+                        companies = mockCompanies(),
                         articles = mockFeed(),
                         courses = mockCourses(),
                         isLoading = false,
@@ -131,7 +131,7 @@ class HomeViewModel @Inject constructor(
                     updateState { copy(isLoading = false) }
                     updateState {
                         copy(
-                            authors = mockCompanies(),
+                            companies = mockCompanies(),
                             articles = mockFeed(),
                             courses = mockCourses(),
                             isLoading = false,

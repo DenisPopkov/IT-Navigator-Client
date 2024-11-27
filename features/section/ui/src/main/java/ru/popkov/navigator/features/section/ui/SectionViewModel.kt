@@ -105,10 +105,10 @@ class SectionViewModel @Inject constructor(
 
         viewModelScope.launch(handler) {
             updateState { copy(isLoading = true) }
-            val authors = feedRepository.getAuthorsFromLocal()
+            val companies = feedRepository.getAuthorsFromLocal()
             updateState {
                 copy(
-                    authors = mockCompanies(),
+                    companies = mockCompanies(),
                     articles = null,
                     courses = null,
                     isLoading = false,
@@ -120,7 +120,7 @@ class SectionViewModel @Inject constructor(
                     updateState { copy(isLoading = false) }
                     updateState {
                         copy(
-                            authors = mockCompanies(),
+                            companies = mockCompanies(),
                             articles = null,
                             courses = null,
                             isLoading = false,
@@ -142,7 +142,7 @@ class SectionViewModel @Inject constructor(
             val articles = feedRepository.getArticlesFromLocal()
             updateState {
                 copy(
-                    authors = null,
+                    companies = null,
                     articles = mockFeed(),
                     courses = null,
                     isLoading = false,
@@ -155,7 +155,7 @@ class SectionViewModel @Inject constructor(
 //                    sendEffect(SectionViewEffect.ShowError("Произошла ошибка!"))
                     updateState {
                         copy(
-                            authors = null,
+                            companies = null,
                             articles = mockFeed(),
                             courses = null,
                             isLoading = false,
@@ -176,7 +176,7 @@ class SectionViewModel @Inject constructor(
             val courses = feedRepository.getPoetsFromLocal()
             updateState {
                 copy(
-                    authors = null,
+                    companies = null,
                     articles = null,
                     courses = mockCourses(),
                     isLoading = false,
@@ -189,7 +189,7 @@ class SectionViewModel @Inject constructor(
 //                    sendEffect(SectionViewEffect.ShowError("Произошла ошибка!"))
                     updateState {
                         copy(
-                            authors = null,
+                            companies = null,
                             articles = null,
                             courses = mockCourses(),
                             isLoading = false,

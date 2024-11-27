@@ -23,8 +23,6 @@ import ru.popkov.android.core.feature.components.core.SectionHeader
 import ru.popkov.android.core.feature.components.core.card.Card
 import ru.popkov.android.core.feature.components.core.card.CardType
 import ru.popkov.android.core.feature.components.core.models.SectionType
-import ru.popkov.android.core.feature.ui.UiModePreviews
-import ru.popkov.navigator.theme.NavigatorTheme
 
 @Composable
 fun SectionScreen(
@@ -89,7 +87,7 @@ internal fun SectionDescription(
                 onAction.invoke(SectionViewAction.OnBackClick)
             }
         )
-        if (!state.authors.isNullOrEmpty()) {
+        if (!state.companies.isNullOrEmpty()) {
             FlowRow(
                 modifier = Modifier
                     .padding(top = 48.dp),
@@ -97,7 +95,7 @@ internal fun SectionDescription(
                 verticalArrangement = Arrangement.spacedBy(20.dp),
                 maxItemsInEachRow = 2,
             ) {
-                state.authors.forEach { company ->
+                state.companies.forEach { company ->
                     Card(
                         cardImageUrl = company.image,
                         cardText = company.name,
@@ -157,16 +155,5 @@ internal fun SectionDescription(
                 }
             }
         }
-    }
-}
-
-@UiModePreviews
-@Composable
-private fun SectionPreview() {
-    NavigatorTheme {
-        SectionDescription(
-            state = SectionState(),
-            sectionType = SectionType.COMPANY,
-        )
     }
 }

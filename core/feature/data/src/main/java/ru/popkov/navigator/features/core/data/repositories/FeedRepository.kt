@@ -24,8 +24,8 @@ class FeedRepository @Inject constructor(
 ) : FeedRepository {
 
     override suspend fun getCompanies(): List<Company> {
-        val authors = feedApi.getCompanies()
-        feedDao.addAuthors(*authors.toListAuthorEntity().toTypedArray())
+        val companies = feedApi.getCompanies()
+        feedDao.addAuthors(*companies.toListAuthorEntity().toTypedArray())
         return feedDao.getCompanies().toListAuthorsDomain()
     }
 
