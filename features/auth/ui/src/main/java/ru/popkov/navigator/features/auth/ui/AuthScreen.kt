@@ -19,9 +19,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import ru.popkov.android.core.feature.ui.UiModePreviews
 import ru.popkov.navigator.features.auth.ui.components.EmailField
 import ru.popkov.navigator.features.auth.ui.components.PasswordField
 import ru.popkov.navigator.theme.FormularRegular14
@@ -77,19 +77,18 @@ private fun Auth(
             .background(color = MaterialTheme.colorScheme.background),
         contentAlignment = Alignment.TopStart,
     ) {
+        Image(
+            modifier = Modifier
+                .align(alignment = Alignment.BottomEnd),
+            painter = painterResource(id = R.drawable.login_screen),
+            contentDescription = "",
+        )
+
         Column(
             modifier = Modifier.padding(horizontal = 16.dp),
             horizontalAlignment = Alignment.Start,
             verticalArrangement = Arrangement.Top,
         ) {
-            Image(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .align(alignment = Alignment.End),
-                painter = painterResource(id = R.drawable.login_screen),
-                contentDescription = "",
-            )
-
             Text(
                 modifier = Modifier
                     .padding(top = 84.dp),
@@ -151,7 +150,7 @@ private fun Auth(
     }
 }
 
-@UiModePreviews
+@Preview
 @Composable
 private fun Preview() {
     NavigatorTheme {
