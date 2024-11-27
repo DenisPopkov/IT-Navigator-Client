@@ -23,6 +23,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/feature/nav/ITNavigatorClient.core.feature.nav.iml" filepath="$PROJECT_DIR$/.idea/modules/core/feature/nav/ITNavigatorClient.core.feature.nav.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/feature/nav/ITNavigatorClient.core.feature.nav.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/core/feature/nav/ITNavigatorClient.core.feature.nav.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/feature/ui/ITNavigatorClient.core.feature.ui.iml" filepath="$PROJECT_DIR$/.idea/modules/core/feature/ui/ITNavigatorClient.core.feature.ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/feature/ui/ITNavigatorClient.core.feature.ui.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/core/feature/ui/ITNavigatorClient.core.feature.ui.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/feature/ui/ITNavigatorClient.core.feature.ui.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/feature/ui/ITNavigatorClient.core.feature.ui.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/feature/ui/ITNavigatorClient.core.feature.ui.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/core/feature/ui/ITNavigatorClient.core.feature.ui.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/features/ITNavigatorClient.features.iml" filepath="$PROJECT_DIR$/.idea/modules/features/ITNavigatorClient.features.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/features/auth/ITNavigatorClient.features.auth.iml" filepath="$PROJECT_DIR$/.idea/modules/features/auth/ITNavigatorClient.features.auth.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/features/auth/nav/ITNavigatorClient.features.auth.nav.iml" filepath="$PROJECT_DIR$/.idea/modules/features/auth/nav/ITNavigatorClient.features.auth.nav.iml" />

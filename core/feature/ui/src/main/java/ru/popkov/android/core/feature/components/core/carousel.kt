@@ -2,6 +2,7 @@ package ru.popkov.android.core.feature.components.core
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -29,6 +30,7 @@ import ru.popkov.android.core.feature.ui.R
 import ru.popkov.android.core.feature.ui.UiModePreviews
 import ru.popkov.navigator.theme.Colors
 import ru.popkov.navigator.theme.FormularRegular16
+import ru.popkov.navigator.theme.GothicBold36
 import ru.popkov.navigator.theme.GothicBold44
 import ru.popkov.navigator.theme.NavigatorTheme
 
@@ -51,7 +53,8 @@ fun Carousel(
             AsyncImage(
                 modifier = Modifier
                     .fillMaxSize()
-                    .alpha(0.7f),
+                    .background(color = Color.Black)
+                    .alpha(0.6f),
                 model = carouselItems[page].articleImage,
                 fallback = painterResource(id = R.drawable.ic_article),
                 contentDescription = null,
@@ -62,9 +65,9 @@ fun Carousel(
                     .padding(all = 16.dp),
             ) {
                 Text(
-                    modifier = Modifier.padding(top = 90.dp),
+                    modifier = Modifier.padding(top = 20.dp),
                     text = carouselItems[page].articleTitle,
-                    style = GothicBold44,
+                    style = GothicBold36,
                     color = Color.White,
                 )
                 Text(
