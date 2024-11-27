@@ -1,0 +1,8 @@
+ru.popkov.navigator.features.auth.ui
+drawable login_screen
+string auth_already_have_account
+string auth_email
+string auth_no_account
+string auth_password
+string auth_title
+string sign_title

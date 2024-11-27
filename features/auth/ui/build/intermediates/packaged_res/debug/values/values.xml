@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="auth_already_have_account">Уже есть аккаунт?</string>
+    <string name="auth_email">Почта</string>
+    <string name="auth_no_account">Нет аккаунта?</string>
+    <string name="auth_password">Пароль</string>
+    <string name="auth_title">Авторизация</string>
+    <string name="sign_title">Регистрация</string>
+</resources>
