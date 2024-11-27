@@ -13,6 +13,7 @@ import ru.popkov.datastore.settings.Settings
 import ru.popkov.navigator.features.home.nav.HomeDestination
 import ru.popkov.navigator.features.home.nav.R
 import ru.popkov.navigator.features.section.ui.SectionDestination
+import ru.popkov.navigator.features.section.ui.SectionScreen
 import ru.popkov.navigator.theme.NavigatorThemeInfinite
 import se.ansman.dagger.auto.AutoBindIntoSet
 import javax.inject.Inject
@@ -56,6 +57,18 @@ class HomeNavProvider @Inject constructor(
                     }
                 }
 
+                composable(
+                    route = SectionDestination.route,
+                    arguments = SectionDestination.args
+                ) {
+                    SectionScreen(
+                        snackbarHostState = snackbarHostState,
+
+                        onBackClick = {
+                            navigator.onBackClick()
+                        }
+                    )
+                }
             }
         }
 
