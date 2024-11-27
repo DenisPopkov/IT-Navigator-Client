@@ -8,6 +8,7 @@ import androidx.navigation.compose.composable
 import ru.popkov.android.core.feature.nav.Navigator
 import ru.popkov.android.core.feature.ui.NavProvider
 import ru.popkov.navigator.features.home.nav.HomeDestination
+import ru.popkov.navigator.features.info.ui.InfoDestination
 import ru.popkov.navigator.features.search.nav.SearchDestination
 import ru.popkov.navigator.features.section.ui.SectionDestination
 import se.ansman.dagger.auto.AutoBindIntoSet
@@ -33,7 +34,8 @@ class SearchNavProvider @Inject constructor(
             ) {
                 SearchScreen(
                     snackbarHostState = snackbarHostState,
-                    onCardClick = {
+                    onCardClick = { cardId, sectionId ->
+                        navigator.navigate(InfoDestination(cardId, sectionId))
                     },
                     onToMainClick = {
                         navigator.navigate(HomeDestination)

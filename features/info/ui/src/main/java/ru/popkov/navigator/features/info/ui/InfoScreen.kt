@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.AsyncImage
 import ru.popkov.android.core.feature.components.core.SectionHeader
@@ -66,6 +67,15 @@ fun InfoScreen(
                             ),
                             modifier = Modifier.padding(bottom = 8.dp)
                         )
+
+                        Text(
+                            text = data?.desc ?: "",
+                            style = MaterialTheme.typography.headlineSmall.copy(
+                                fontWeight = FontWeight.Normal,
+                                fontSize = 16.sp
+                            ),
+                            modifier = Modifier.padding(top = 8.dp)
+                        )
                     }
                 }
 
@@ -88,6 +98,15 @@ fun InfoScreen(
                             ),
                             modifier = Modifier.padding(bottom = 8.dp)
                         )
+
+                        Text(
+                            text = data?.desc ?: "",
+                            style = MaterialTheme.typography.headlineSmall.copy(
+                                fontWeight = FontWeight.Normal,
+                                fontSize = 16.sp
+                            ),
+                            modifier = Modifier.padding(top = 8.dp)
+                        )
                     }
                 }
 
@@ -108,7 +127,24 @@ fun InfoScreen(
                             style = MaterialTheme.typography.headlineMedium.copy(
                                 fontWeight = FontWeight.Bold
                             ),
-                            modifier = Modifier.padding(bottom = 8.dp)
+                            modifier = Modifier.padding(vertical = 8.dp)
+                        )
+
+                        Text(
+                            text = data?.date ?: "",
+                            style = MaterialTheme.typography.headlineSmall.copy(
+                                fontWeight = FontWeight.Normal
+                            ),
+                            modifier = Modifier.padding(vertical = 4.dp)
+                        )
+
+                        Text(
+                            text = data?.desc ?: "",
+                            style = MaterialTheme.typography.headlineSmall.copy(
+                                fontWeight = FontWeight.Normal,
+                                fontSize = 16.sp
+                            ),
+                            modifier = Modifier.padding(vertical = 8.dp)
                         )
                     }
                 }

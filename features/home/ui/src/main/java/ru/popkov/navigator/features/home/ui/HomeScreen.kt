@@ -126,7 +126,7 @@ private fun Home(
                     cardType = CardType.SMALL,
                     onCardActionClick = {
                         onAction.invoke(
-                            HomeViewAction.OnCardClick(company.id, 0)
+                            HomeViewAction.OnCardClick(company.id, 1)
                         )
                     },
                 )

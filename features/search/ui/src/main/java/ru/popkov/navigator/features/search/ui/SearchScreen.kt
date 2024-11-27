@@ -44,7 +44,7 @@ internal fun SearchScreen(
     snackbarHostState: SnackbarHostState,
     searchViewModel: SearchViewModel = hiltViewModel(),
     onToMainClick: () -> Unit = {},
-    onCardClick: (cardId: Long) -> Unit = {},
+    onCardClick: (cardId: Int, sectionId: Int) -> Unit,
     onSectionClick: (sectionId: Int) -> Unit = {},
 ) {
     val state by searchViewModel.state.collectAsState()
@@ -57,7 +57,7 @@ internal fun SearchScreen(
                     is SearchViewEffect.ShowError -> snackbarHostState.showSnackbar(effect.errorMessage)
                     is SearchViewEffect.GoToMainScreen -> onToMainClick.invoke()
                     is SearchViewEffect.OnSectionClick -> onSectionClick.invoke(effect.sectionId)
-                    is SearchViewEffect.OnCardClick -> onCardClick.invoke(effect.cardId)
+                    is SearchViewEffect.OnCardClick -> onCardClick.invoke(effect.cardId.toInt(), 0)
                 }
             }
     }
